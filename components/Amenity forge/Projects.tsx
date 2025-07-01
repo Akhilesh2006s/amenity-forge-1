@@ -6,7 +6,7 @@ import { useState } from "react"
 const pinData = [
   {
     title: "Photography Portfolio",
-    href: "https://example.com/photography",
+    href: "11.jpg",
     description: "Stunning landscape and portrait photography collection.",
     image: "/placeholder.svg?height=160&width=280",
   },
