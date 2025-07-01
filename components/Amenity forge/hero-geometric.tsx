@@ -85,8 +85,11 @@ export default function HeroGeometric() {
   }
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black">
-      <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/[0.03] via-transparent to-yellow-600/[0.03] blur-3xl" />
+    
+ <section
+      id="home"
+      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-black"
+    >      <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/[0.03] via-transparent to-yellow-600/[0.03] blur-3xl" />
 
       <div className="absolute inset-0 overflow-hidden">
         <ElegantShape
@@ -144,12 +147,12 @@ export default function HeroGeometric() {
             animate="visible"
   className="flex justify-center -translate-y-16"
             >
-            <Image src="Logo.jpg" alt="Logo" width={120} height={70} />
+            <Image src="Logo.png" alt="Logo" width={500} height={600} />
           </motion.div>
         </div>
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/80 pointer-events-none" />
-    </div>
+  </section>
   )
 }

@@ -8,10 +8,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { name: "Home", href: "#" },
+    { name: "Home", href: "/Home" },
     { name: "About", href: "#" },
-    { name: "Services", href: "#" },
-    { name: "Portfolio", href: "#" },
+        { name: "Products", href: "/ComingSoon" },
+
+      { name: "Brochure", href: "/brochure" },  
     { name: "Contact", href: "#" },
   ]
 
@@ -24,20 +25,22 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo placeholder */}
+          {/* Logo image */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex items-center"
           >
-            <div className="w-10 h-10 bg-gradient-to-r from-yellow-300 via-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-lg">AF</span>
-            </div>
+            <img
+              src="/Logo.png"
+              alt="Logo"
+              className="h-10 w-auto object-contain"
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 ml-auto">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
@@ -45,10 +48,10 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                className="text-white/80 hover:text-yellow-400 transition-colors duration-300 relative group"
+                className="relative text-white/90 hover:text-yellow-400 transition-colors duration-300 text-sm md:text-base group"
               >
                 {item.name}
-                <motion.div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-300 to-yellow-500 group-hover:w-full transition-all duration-300" />
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-yellow-300 to-yellow-500 group-hover:w-full transition-all duration-300"></span>
               </motion.a>
             ))}
           </div>
@@ -80,7 +83,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="block text-white/80 hover:text-yellow-400 transition-colors duration-300 py-2"
+                className="block text-white/90 hover:text-yellow-400 transition-colors duration-300 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}

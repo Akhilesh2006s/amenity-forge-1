@@ -121,7 +121,8 @@ export default function ComicBookReader() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-screen bg-black p-4 sm:p-8 md:p-20 pt-16 sm:pt-24 md:pt-32">
+    
+  <section id="about" className="flex flex-col items-center justify-start min-h-screen bg-black p-4 sm:p-8 md:p-20 pt-16 sm:pt-24 md:pt-32">
       <div className="mb-8 text-center">
         <h1 className="text-7xl lg:text-7xl font-bold mb-20 leading-tight max-w-7xl mx-auto text-yellow-400">
           OUR COMPANY BROCHURE
@@ -299,6 +300,6 @@ export default function ComicBookReader() {
           perspective: 1200px;
         }
       `}</style>
-    </div>
+</section>
   )
 }
