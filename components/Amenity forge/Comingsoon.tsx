@@ -80,9 +80,7 @@ export default function ComingSoon() {
               </div>
             </div>
 
-            <p className="max-w-md mx-auto text-lg mb-8">
-              Our Product is under construction. We'll be here soon<br />
-            </p>
+        
 
             
           </div>
