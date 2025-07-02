@@ -1,18 +1,20 @@
-// app/brochure/page.tsx
 "use client"
 
-import Home from "@/components/Amenity forge/Home"
-import Navbar from "@/components/Amenity forge/navbar"
+import Home from "../components/Amenity forge/Home"
+
+import Navbar from "../components/Amenity forge/navbar"
 import Service from "@/components/Amenity forge/Service"
+import Contact from "@/components/Amenity forge/Contact"
 
 
-export default function BrochurePage() {
+export default function Page() {
   return (
-    <section id="about" className="bg-black">
-          <Navbar />
-      
-      <Home />
-      <Service/>
-    </section>
-  )
+    <>
+    <Navbar />
+    <Home />
+    <Service/>
+    <Contact/>
+    
+    </>
+  );
 }
