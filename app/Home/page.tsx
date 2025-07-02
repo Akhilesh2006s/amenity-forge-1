@@ -4,6 +4,9 @@
 import Home from "@/components/Amenity forge/Home"
 import Navbar from "@/components/Amenity forge/navbar"
 import Service from "@/components/Amenity forge/Service"
+import Contact from "@/components/Amenity forge/Contact"
+import About from "@/components/Amenity forge/About"
+import Review from "@/components/Amenity forge/Testimonials"
 
 
 export default function BrochurePage() {
@@ -13,6 +16,9 @@ export default function BrochurePage() {
       
       <Home />
       <Service/>
+      <About/>
+      <Review/>
+      <Contact/>
     </section>
   )
 }
