@@ -32,7 +32,7 @@ export default function Navbar() {
             className="flex items-center"
           >
             <img
-              src="/Logo.png"
+              src="/logo1.jpg"
               alt="Logo"
               className="h-10 w-auto object-contain"
             />
