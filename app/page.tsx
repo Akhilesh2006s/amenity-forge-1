@@ -7,7 +7,7 @@ import Service from "@/components/Amenity forge/Service"
 import Contact from "@/components/Amenity forge/Contact"
 import About from "@/components/Amenity forge/About"
 import Review from "@/components/Amenity forge/Testimonials"
-
+import Footer from "@/components/Amenity forge/footer"
 
 export default function BrochurePage() {
   return (
@@ -19,6 +19,8 @@ export default function BrochurePage() {
       <About/>
       <Review/>
       <Contact/>
+      <Footer/>
+
     </section>
   )
 }
