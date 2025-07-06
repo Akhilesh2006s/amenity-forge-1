@@ -5,38 +5,31 @@ import { useState } from "react"
 
 const pinData = [
   {
-    title: "Photography Portfolio",
-    description: "Stunning landscape and portrait photography collection.",
+    title: "Game Dashboards",
     image: "21.png",
   },
   {
-    title: "Design Studio",
-    description: "Creative design solutions for modern brands.",
+    title: "Edfunplay",
     image: "22.png",
   },
   {
-    title: "Tech Blog",
-    description: "Latest insights on web development and AI.",
+    title: "Revenue Gear",
     image: "23.png",
   },
   {
-    title: "Travel Journal",
-    description: "Adventures and stories from around the world.",
+    title: "Quiz Hunt",
     image: "24.png",
   },
   {
     title: "Food & Recipe",
-    description: "Delicious recipes and culinary experiences.",
     image: "25.png",
   },
   {
-    title: "Fitness Tracker",
-    description: "Your personal health and wellness companion.",
+    title: "Edu Chatbot",
     image: "26.png",
   },
   {
-    title: "Music Studio",
-    description: "Professional music production and mixing.",
+    title: "Kid Fun Tutorials",
     image: "27.png",
   },
  
@@ -72,7 +65,6 @@ export default function AnimatedPinGallery() {
 <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100 w-[20rem] h-[20rem] border border-black-400 rounded-xl bg-gradient-to-br from-black-300 via-black-400 to-black-500 shadow-lg">
                   <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">{pin.title}</h3>
                   <div className="text-base !m-0 !p-0 font-normal">
-                    <span className="text-slate-500">{pin.description}</span>
                   </div>
                   <div className="flex flex-1 w-full rounded-lg mt-4 overflow-hidden">
                     <img
