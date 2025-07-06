@@ -53,7 +53,7 @@ const Hero = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-5xl lg:text-6xl font-Inter bold leading-tight">
                 <span className="text-white">Turn Your Vision</span>
                 <br />
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
