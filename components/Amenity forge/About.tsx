@@ -55,9 +55,7 @@ const About = () => {
                 <span className="relative z-10">About Amenity</span>
                 <span className="absolute -bottom-2 left-0 w-32 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></span>
               </h2>
-              <p className="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-8">
-                Founded by Shri Yasaswi with a vision to transform businesses through technology
-              </p>
+              
             </div>
 
             <div className="space-y-6 text-gray-700 relative">
@@ -168,7 +166,7 @@ const About = () => {
                   <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
                 </div>
                 <div>
-                  <p className="text-black font-semibold text-sm group-hover:text-orange-500 transition-colors duration-300">Raj Mehta</p>
+                  <p className="text-black font-semibold text-sm group-hover:text-orange-500 transition-colors duration-300">Rajender</p>
                   <p className="text-gray-600 text-xs group-hover:text-gray-700 transition-colors duration-300">CTO, Techinnovate</p>
                 </div>
               </div>
