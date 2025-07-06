@@ -1,5 +1,8 @@
 import React from 'react';
-import { Crown, Sparkles, Users, Target, Star, Award, Zap, Globe, BookOpen, Briefcase } from 'lucide-react';
+import {
+  Crown, Sparkles, Users, Target, Star, Award, Zap,
+  Globe, BookOpen, Briefcase
+} from 'lucide-react';
 
 function App() {
   const teamMembers = [
@@ -8,28 +11,28 @@ function App() {
       role: "AI Engineer & Head of Service Crew",
       description: "Leading our AI initiatives and service excellence with innovation and precision.",
       education: "B-Tech Bennett University (Times of India)",
-      icon: <Zap className="w-6 h-6" />
+      photo: "/images/vanshika.jpg"
     },
     {
       name: "Chelluri Bhavya Madhav",
       role: "CTO",
       description: "Orchestrating our technological infrastructure and data-driven solutions.",
       education: "B-Tech Bennett University (Times of India)",
-      icon: <Globe className="w-6 h-6" />
+      photo: "/images/bhavya.jpg"
     },
     {
       name: "Akhilesh Samyamanthula",
       role: "Head of Web & App Development",
       description: "Crafting exceptional digital experiences and scalable applications.",
       education: "B-Tech from VIT",
-      icon: <Star className="w-6 h-6" />
+      photo: "/images/akhilesh.jpg"
     },
     {
       name: "Kalyan Reddy",
       role: "HR & SDE",
       description: "Managing strategic coordination and ensuring seamless team operations.",
       education: "B-Tech from IIT",
-      icon: <Award className="w-6 h-6" />
+      photo: "/images/kalyan.jpg"
     }
   ];
 
@@ -39,21 +42,19 @@ function App() {
       role: "Product Co-ordinator",
       description: "His experience he is giving to help us build products",
       education: "PhD IIT, UH",
-      icon: <BookOpen className="w-6 h-6" />,
-      hasImage: true
+      photo: "/amit'.jpg",
     },
     {
       name: "Vinod Shastri",
       role: "Co-ordinator",
       description: "His experience he is giving to help us scale big in the world with right insights",
       education: "PhD Entrepreneurship MoC, MBA",
-      icon: <Briefcase className="w-6 h-6" />,
-      hasImage: true
+      photo: "/vinod sir.jpg",
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
+    <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-yellow-400/10"></div>
@@ -88,15 +89,15 @@ function App() {
               </h2>
               <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
                 <p>
-                  <span className="text-amber-400 font-semibold">Founder & Visionary</span> behind our transformative journey, 
+                  <span className="text-amber-400 font-semibold">Founder & Visionary</span> behind our transformative journey,
                   Shri Yasaswi brings a unique blend of entrepreneurial spirit and technological innovation.
                 </p>
                 <p>
-                  As the founder of <span className="text-amber-400 font-medium">Adorable Aroma</span> (event management), 
+                  As the founder of <span className="text-amber-400 font-medium">Adorable Aroma</span> (event management),
                   he has demonstrated exceptional leadership in creating memorable experiences and building lasting relationships.
                 </p>
                 <p>
-                  His vision extends beyond traditional boundaries - <span className="text-amber-400 font-medium">making things better</span> 
+                  His vision extends beyond traditional boundaries - <span className="text-amber-400 font-medium">making things better</span>
                   for people through cutting-edge AI and software products that truly serve humanity.
                 </p>
               </div>
@@ -109,16 +110,15 @@ function App() {
               </div>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-yellow-400/20 rounded-3xl blur-xl"></div>
-              <div className="relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl border border-amber-500/30 backdrop-blur-sm">
+              <div className="absolute inset-0 bg-amber-500/20 rounded-3xl blur-xl"></div>
+              <div className="relative bg-black p-8 rounded-3xl border border-amber-500/30 backdrop-blur-sm">
                 <div className="text-center space-y-6">
-                  {/* Image placeholder box for Shri Yasaswi */}
-                  <div className="w-40 h-40 mx-auto bg-gradient-to-br from-amber-400/20 to-yellow-500/20 rounded-2xl border-2 border-amber-500/40 flex items-center justify-center relative overflow-hidden group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-yellow-500/10 group-hover:from-amber-400/20 group-hover:to-yellow-500/20 transition-all duration-300"></div>
-                    <div className="relative text-center">
-                      <Crown className="w-12 h-12 text-amber-400 mx-auto mb-2" />
-                      <p className="text-amber-400 text-sm font-medium">Founder Photo</p>
-                    </div>
+                  <div className="w-40 h-40 mx-auto rounded-2xl border-2 border-amber-500/40 overflow-hidden">
+                    <img 
+                      src="/ceo.jpg" 
+                      alt="Shri Yasaswi"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-amber-400 mb-2">Leadership Excellence</h3>
@@ -143,7 +143,7 @@ function App() {
 
       {/* Team Section */}
       <div className="relative py-20">
-        <div className="absolute inset-0 bg-gradient-to-l from-amber-500/5 to-transparent"></div>
+        <div className="absolute inset-0 bg-black"></div>
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-gradient-to-r from-amber-500/20 to-yellow-400/20 rounded-full border border-amber-500/30">
@@ -158,17 +158,22 @@ function App() {
             </p>
           </div>
 
+          {/* Team Cards */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {teamMembers.map((member, index) => (
-              <div 
+              <div
                 key={index}
-                className="group relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:transform hover:scale-105"
+                className="group relative bg-black p-8 rounded-3xl border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:scale-105"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-yellow-400/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-amber-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
                   <div className="flex items-start gap-4 mb-6">
-                    <div className="w-14 h-14 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-xl flex items-center justify-center text-black group-hover:scale-110 transition-transform duration-300">
-                      {member.icon}
+                    <div className="w-14 h-14 rounded-xl overflow-hidden border border-amber-500/30">
+                      <img 
+                        src={member.photo} 
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors duration-300">
@@ -193,7 +198,7 @@ function App() {
             ))}
           </div>
 
-          {/* Strategic Growth Mentors Section */}
+          {/* Advisors */}
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold mb-4">
               Strategic <span className="bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">Growth Mentors</span>
@@ -205,24 +210,28 @@ function App() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {advisors.map((advisor, index) => (
-              <div 
+              <div
                 key={index}
-                className="group relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-3xl border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:transform hover:scale-105"
+                className="group relative bg-black p-8 rounded-3xl border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:scale-105"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-yellow-400/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-amber-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
                   <div className="flex items-start gap-6 mb-6">
                     <div className="flex flex-col items-center gap-4">
-                      <div className="w-14 h-14 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-xl flex items-center justify-center text-black group-hover:scale-110 transition-transform duration-300">
-                        {advisor.icon}
+                      <div className="w-14 h-14 rounded-xl overflow-hidden border border-amber-500/30 relative">
+                        <img 
+                          src={advisor.photo} 
+                          alt={advisor.name}
+                          className="w-full h-full object-cover"
+                        />
+                        
                       </div>
-                      {/* Image placeholder box for advisors */}
-                      <div className="w-24 h-24 bg-gradient-to-br from-amber-400/20 to-yellow-500/20 rounded-xl border-2 border-amber-500/40 flex items-center justify-center relative overflow-hidden group">
-                        <div className="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-yellow-500/10 group-hover:from-amber-400/20 group-hover:to-yellow-500/20 transition-all duration-300"></div>
-                        <div className="relative text-center">
-                          <Crown className="w-8 h-8 text-amber-400 mx-auto mb-1" />
-                          <p className="text-amber-400 text-xs font-medium">Photo</p>
-                        </div>
+                      <div className="w-24 h-24 rounded-xl overflow-hidden border-2 border-amber-500/40">
+                        <img 
+                          src={advisor.photo} 
+                          alt={advisor.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                     </div>
                     <div className="flex-1">
@@ -250,19 +259,18 @@ function App() {
         </div>
       </div>
 
-      {/* Vision Statement */}
+      {/* Vision Section */}
       <div className="relative py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-transparent to-amber-500/10"></div>
         <div className="relative max-w-5xl mx-auto px-6 text-center">
-          <div className="bg-gradient-to-br from-gray-900 to-black p-12 rounded-3xl border border-amber-500/30 backdrop-blur-sm">
+          <div className="bg-black p-12 rounded-3xl border border-amber-500/30 backdrop-blur-sm">
             <Crown className="w-16 h-16 mx-auto mb-8 text-amber-400" />
             <h2 className="text-4xl font-bold mb-8">
               Our <span className="bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">Commitment</span>
             </h2>
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              We believe in the power of technology to transform lives. Every product we build, 
-              every solution we create, is designed with one purpose: to make things better for people. 
-              Through AI innovation and thoughtful software development, we're not just building products - 
+              We believe in the power of technology to transform lives. Every product we build,
+              every solution we create, is designed with one purpose: to make things better for people.
+              Through AI innovation and thoughtful software development, we're not just building products -
               we're building a better future.
             </p>
             <div className="flex justify-center items-center gap-2 text-amber-400">
@@ -270,18 +278,6 @@ function App() {
               <span className="font-semibold">Serving People Through Innovation</span>
               <Sparkles className="w-5 h-5" />
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Inspiration Section */}
-      <div className="relative py-16">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <div className="bg-gradient-to-r from-amber-500/10 to-yellow-400/10 p-8 rounded-2xl border border-amber-500/20">
-            <p className="text-lg text-gray-300 leading-relaxed">
-              <span className="text-amber-400 font-semibold">Inspired by the entrepreneurial spirit fostered by founder Mr. Vineet Jain</span>, 
-              we strive to create meaningful impact through innovation and technology
-            </p>
           </div>
         </div>
       </div>
