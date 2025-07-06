@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {/* Logo & Description */}
         <div>
-          <h1 className="text-2xl font-bold text-white mb-3">Amenityforge</h1>
+          <h1 className="text-2xl font-bold text-white mb-3">Amenity Forge</h1>
           <p className="text-sm text-gray-400">
             Crafting digital experiences with precision and creativity.
           </p>
