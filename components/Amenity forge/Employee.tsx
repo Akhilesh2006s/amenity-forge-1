@@ -198,7 +198,7 @@ function App() {
             ))}
           </div>
 
-          {/* Advisors */}
+          {/* Advisors - Modified Section */}
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold mb-4">
               Strategic <span className="bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">Growth Mentors</span>
@@ -217,21 +217,14 @@ function App() {
                 <div className="absolute inset-0 bg-amber-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative">
                   <div className="flex items-start gap-6 mb-6">
-                    <div className="flex flex-col items-center gap-4">
-                      <div className="w-14 h-14 rounded-xl overflow-hidden border border-amber-500/30 relative">
-                        <img 
-                          src={advisor.photo} 
-                          alt={advisor.name}
-                          className="w-full h-full object-cover"
-                        />
-                        
-                      </div>
-                      <div className="w-24 h-24 rounded-xl overflow-hidden border-2 border-amber-500/40">
-                        <img 
-                          src={advisor.photo} 
-                          alt={advisor.name}
-                          className="w-full h-full object-cover"
-                        />
+                    <div className="w-24 h-24 rounded-xl overflow-hidden border-2 border-amber-500/40 relative">
+                      <img 
+                        src={advisor.photo} 
+                        alt={advisor.name}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute -bottom-2 -right-2 bg-amber-500 p-1 rounded-full">
+                        {advisor.icon}
                       </div>
                     </div>
                     <div className="flex-1">
