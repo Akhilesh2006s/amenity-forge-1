@@ -32,18 +32,18 @@ function App() {
     }
   ];
 
-  const advisors = [
+ const advisors = [
     {
       name: "Amit Soni",
       role: "Product Co-ordinator",
-      description: "His experience he is giving to help us build products",
+      description: "Dr. Amit Soni offers invaluable guidance in product development, drawing upon his extensive academic background and research expertise to support the strategic formulation and refinement of our product initiatives.",
       education: "PhD IIT, UH",
       photo: "/amit'.jpg",
     },
     {
       name: "Vinod Shastri",
       role: "Co-ordinator",
-      description: "His experience he is giving to help us scale big in the world with right insights",
+      description: "Mr. Vinod Shastri provides strategic mentorship, leveraging his profound experience in entrepreneurship and leadership to facilitate informed decision-making and scalable business growth.",
       education: "PhD Entrepreneurship MoC, MBA",
       photo: "/vinod sir.jpg",
     }
