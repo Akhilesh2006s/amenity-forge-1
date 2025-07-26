@@ -11,28 +11,24 @@ function App() {
       role: "AI Engineer & Head of Service Crew",
       description: "Leading our AI initiatives and service excellence with innovation and precision.",
       education: "B-Tech Bennett University (Times of India)",
-      photo: "/images/vanshika.jpg"
     },
     {
       name: "Chelluri Bhavya Madhav",
       role: "CTO",
       description: "Orchestrating our technological infrastructure and data-driven solutions.",
       education: "B-Tech Bennett University (Times of India)",
-      photo: "/images/bhavya.jpg"
     },
     {
       name: "Akhilesh Samyamanthula",
       role: "Head of Web & App Development",
       description: "Crafting exceptional digital experiences and scalable applications.",
       education: "B-Tech from VIT",
-      photo: "/images/akhilesh.jpg"
     },
     {
       name: "Kalyan Reddy",
       role: "HR & SDE",
       description: "Managing strategic coordination and ensuring seamless team operations.",
       education: "B-Tech from IIT",
-      photo: "/images/kalyan.jpg"
     }
   ];
 
@@ -169,11 +165,7 @@ function App() {
                 <div className="relative">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-14 h-14 rounded-xl overflow-hidden border border-amber-500/30">
-                      <img 
-                        src={member.photo} 
-                        alt={member.name}
-                        className="w-full h-full object-cover"
-                      />
+                      
                     </div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors duration-300">
