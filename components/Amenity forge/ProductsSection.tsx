@@ -1,5 +1,8 @@
+"use client"
+
 import ProductCard from "./ProductCard";
 import { Cpu, GraduationCap, Award, Sparkles, Zap } from "lucide-react";
+import { motion } from "framer-motion";
 
 const ProductsSection = () => {
   const products = [
