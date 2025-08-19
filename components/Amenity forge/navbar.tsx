@@ -9,7 +9,6 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", href: "/Home" },
-    { name: "About", href: "/About" },
     { name: "Products", href: "/ComingSoon" },
     { name: "Services", href: "/Services" },
     { name: "Brochure", href: "/brochure" },
@@ -24,18 +23,21 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo image */}
+          {/* Logo + Text */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center"
+            className="flex items-center space-x-3"
           >
             <img
-              src="/Logo.png"
+              src="/logo1.jpg"
               alt="Logo"
               className="h-10 w-auto object-contain"
             />
+            <span className="text-lg md:text-xl font-semibold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300 bg-clip-text text-transparent tracking-wide">
+              Amenity Forge
+            </span>
           </motion.div>
 
           {/* Desktop Navigation */}

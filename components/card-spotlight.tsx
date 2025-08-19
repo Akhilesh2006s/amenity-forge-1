@@ -2,7 +2,6 @@
 
 import { useMotionValue, motion, useMotionTemplate } from "framer-motion"
 import React, { type MouseEvent as ReactMouseEvent, useState } from "react"
-import GoldRevealCanvas from "@/components/ui/GoldRevealCanvas" // ✅ ensure this matches the actual path
 import { cn } from "@/lib/utils"
 
 export const CardSpotlight = ({
@@ -29,8 +28,6 @@ export const CardSpotlight = ({
     mouseY.set(clientY - top)
   }
 
-  const [isHovering, setIsHovering] = useState(false)
-
   return (
     <div
       className={cn(
@@ -38,11 +35,9 @@ export const CardSpotlight = ({
         className
       )}
       onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
       {...props}
     >
-      {/* Gold radial mask overlay */}
+      {/* Solid gold radial mask overlay */}
       <motion.div
         className="pointer-events-none absolute z-0 -inset-px rounded-xl opacity-0 transition duration-300 group-hover/spotlight:opacity-100"
         style={{
@@ -55,15 +50,7 @@ export const CardSpotlight = ({
             )
           `,
         }}
-      >
-        {isHovering && (
-          <GoldRevealCanvas
-            dotSize={3}
-            interval={200}
-            containerClassName="bg-transparent absolute inset-0 pointer-events-none z-0"
-          />
-        )}
-      </motion.div>
+      />
 
       {/* Card content */}
       <div className="relative z-10">{children}</div>

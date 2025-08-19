@@ -8,9 +8,8 @@ const Testimonials = () => {
     {
       id: 0,
       quote: "Amenity transformed our outdated systems with their custom software development. The team was professional and delivered exactly what we needed.",
-      name: "Rajesh Kumar",
+      name: "Ankith Kumar",
       position: "TechSoft Solutions",
-      image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150",
       rating: 5
     },
     {
@@ -18,15 +17,13 @@ const Testimonials = () => {
       quote: "The mobile app developed by Amenity boosted our sales by 40%. Their expertise in UI/UX design created an intuitive experience for our customers.",
       name: "Priya Sharma", 
       position: "Greenleaf E-commerce",
-      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150",
       rating: 5
     },
     {
       id: 2,
       quote: "Amenity's digital marketing strategy dramatically improved our online presence. We've seen a 65% increase in qualified leads since partnering with them.",
-      name: "Vikram Singh",
+      name: "Rajesh",
       position: "Global Logistics Inc.",
-      image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150",
       rating: 5
     }
   ];
@@ -62,7 +59,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
-            What Our Clients Say
+            What Our Clients Sa
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Don't just take our word for it. Here's what some of our clients have to say about working with us.
@@ -119,12 +116,7 @@ const Testimonials = () => {
                     </p>
                   </div>
 
-                  <div className="flex items-center space-x-4">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-14 h-14 rounded-full object-cover border-2 border-yellow-400"
-                    />
+                  <div className="flex items-center">
                     <div>
                       <h4 className="text-black font-bold text-lg">{testimonial.name}</h4>
                       <p className="text-gray-600">{testimonial.position}</p>

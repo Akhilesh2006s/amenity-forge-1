@@ -1,15 +1,17 @@
+// app/brochure/page.tsx
 "use client"
 
-import ComingSoon from "@/components/Amenity forge/Comingsoon"
+import Hero from "@/components/Amenity forge/Hero"
+import ProductsSection from "@/components/Amenity forge/ProductsSection"
+import CallToAction from "@/components/Amenity forge/CallToAction"
 import Navbar from "@/components/Amenity forge/navbar"
 
-
-export default function BrochurePage() {
+export default function HomePage() {
   return (
-    <section id="about" className="bg-black">
-          <Navbar />
-      
-      <ComingSoon />
-    </section>
-  )
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <ProductsSection />
+      <CallToAction />
+    </div>
+  );
 }

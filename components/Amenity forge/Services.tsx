@@ -83,7 +83,7 @@ export default function ServicesGrid() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <CardSpotlight key={index} className="h-64 w-full" color="#1e40af">
+            <CardSpotlight key={index} className="h-64 w-full" color="#B8860B">
               <div className="relative z-20 h-full flex flex-col">
                 <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-neutral-200 text-sm leading-relaxed flex-1">{service.description}</p>

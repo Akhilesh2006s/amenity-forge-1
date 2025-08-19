@@ -5,69 +5,37 @@ import { useState } from "react"
 
 const pinData = [
   {
-    title: "Photography Portfolio",
-    href: "11.jpg",
-    description: "Stunning landscape and portrait photography collection.",
-    image: "/placeholder.svg?height=160&width=280",
+    title: "Game Dashboards",
+    image: "21.png",
   },
   {
-    title: "Design Studio",
-    href: "https://example.com/design",
-    description: "Creative design solutions for modern brands.",
-    image: "/placeholder.svg?height=160&width=280",
+    title: "Edfunplay",
+    image: "22.png",
   },
   {
-    title: "Tech Blog",
-    href: "https://example.com/tech",
-    description: "Latest insights on web development and AI.",
-    image: "/placeholder.svg?height=160&width=280",
+    title: "Revenue Gear",
+    image: "23.png",
   },
   {
-    title: "Travel Journal",
-    href: "https://example.com/travel",
-    description: "Adventures and stories from around the world.",
-    image: "/placeholder.svg?height=160&width=280",
+    title: "Quiz Hunt",
+    image: "24.png",
   },
   {
     title: "Food & Recipe",
-    href: "https://example.com/food",
-    description: "Delicious recipes and culinary experiences.",
-    image: "/placeholder.svg?height=160&width=280",
+    image: "25.png",
   },
   {
-    title: "Fitness Tracker",
-    href: "https://example.com/fitness",
-    description: "Your personal health and wellness companion.",
-    image: "/placeholder.svg?height=160&width=280",
+    title: "Edu Chatbot",
+    image: "26.png",
   },
   {
-    title: "Music Studio",
-    href: "https://example.com/music",
-    description: "Professional music production and mixing.",
-    image: "/placeholder.svg?height=160&width=280",
+    title: "Kid Fun Tutorials",
+    image: "27.png",
   },
-  {
-    title: "Art Gallery",
-    href: "https://example.com/art",
-    description: "Contemporary art exhibitions and collections.",
-    image: "/placeholder.svg?height=160&width=280",
-  },
-  {
-    title: "Learning Hub",
-    href: "https://example.com/learning",
-    description: "Interactive courses and educational content.",
-    image: "/placeholder.svg?height=160&width=280",
-  },
-  {
-    title: "Business Tools",
-    href: "https://example.com/business",
-    description: "Productivity tools for modern entrepreneurs.",
-    image: "/placeholder.svg?height=160&width=280",
-  },
+ 
 ]
 
 export default function AnimatedPinGallery() {
-  // Duplicate the array to create seamless loop
   const duplicatedPins = [...pinData, ...pinData]
   const [isHovered, setIsHovered] = useState(false)
 
@@ -94,21 +62,18 @@ export default function AnimatedPinGallery() {
           >
             {duplicatedPins.map((pin, index) => (
               <div key={index} className="flex-shrink-0">
-                <PinContainer title={pin.title} href={pin.href}>
-                  <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem]">
-                    <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">{pin.title}</h3>
-                    <div className="text-base !m-0 !p-0 font-normal">
-                      <span className="text-slate-500">{pin.description}</span>
-                    </div>
-                    <div className="flex flex-1 w-full rounded-lg mt-4 overflow-hidden">
-                      <img
-                        src={pin.image || "/placeholder.svg"}
-                        alt={pin.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+<div className="flex basis-full flex-col p-4 tracking-tight text-slate-100 w-[20rem] h-[20rem] border border-black-400 rounded-xl bg-gradient-to-br from-black-300 via-black-400 to-black-500 shadow-lg">
+                  <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">{pin.title}</h3>
+                  <div className="text-base !m-0 !p-0 font-normal">
                   </div>
-                </PinContainer>
+                  <div className="flex flex-1 w-full rounded-lg mt-4 overflow-hidden">
+                    <img
+                      src={pin.image || "/placeholder.svg"}
+                      alt={pin.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
               </div>
             ))}
           </motion.div>

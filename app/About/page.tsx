@@ -1,8 +1,7 @@
 "use client"
 
-import About from "@/components/Amenity forge/About"
+import About from "@/components/Amenity forge/Employee"
 import Navbar from "@/components/Amenity forge/navbar"
-import Review from "@/components/Amenity forge/Testimonials"
 
 
 export default function BrochurePage() {
@@ -11,7 +10,6 @@ export default function BrochurePage() {
           <Navbar />
       
       <About />
-      <Review />
     </section>
   )
 }
