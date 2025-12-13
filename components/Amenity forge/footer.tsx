@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
+import { Instagram, Linkedin, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -71,16 +71,13 @@ export default function Footer() {
         <div className="animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <h3 className="text-white font-semibold mb-4 text-lg">Connect</h3>
           <div className="flex space-x-4 mt-2">
-            <a href="#" className="group relative p-2 rounded-lg bg-gray-800/50 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500 transition-all duration-300 transform hover:scale-110">
+            <a href="https://www.instagram.com/amenityforge/" target="_blank" rel="noopener noreferrer" className="group relative p-2 rounded-lg bg-gray-800/50 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500 transition-all duration-300 transform hover:scale-110">
               <Instagram className="text-gray-400 group-hover:text-black transition-colors duration-300" />
             </a>
-            <a href="#" className="group relative p-2 rounded-lg bg-gray-800/50 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500 transition-all duration-300 transform hover:scale-110">
-              <Twitter className="text-gray-400 group-hover:text-black transition-colors duration-300" />
+            <a href="https://in.linkedin.com/company/amenityforge" target="_blank" rel="noopener noreferrer" className="group relative p-2 rounded-lg bg-gray-800/50 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500 transition-all duration-300 transform hover:scale-110">
+              <Linkedin className="text-gray-400 group-hover:text-black transition-colors duration-300" />
             </a>
-            <a href="#" className="group relative p-2 rounded-lg bg-gray-800/50 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500 transition-all duration-300 transform hover:scale-110">
-              <Facebook className="text-gray-400 group-hover:text-black transition-colors duration-300" />
-            </a>
-            <a href="#" className="group relative p-2 rounded-lg bg-gray-800/50 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500 transition-all duration-300 transform hover:scale-110">
+            <a href="https://mail.google.com/mail/?view=cm&to=amenityforge@gmail.com" target="_blank" rel="noopener noreferrer" className="group relative p-2 rounded-lg bg-gray-800/50 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500 transition-all duration-300 transform hover:scale-110">
               <Mail className="text-gray-400 group-hover:text-black transition-colors duration-300" />
             </a>
           </div>

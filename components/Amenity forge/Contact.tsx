@@ -228,7 +228,7 @@ const Contact = () => {
                     <p className="text-white font-semibold text-base sm:text-lg group-hover:text-yellow-400 transition-colors duration-300">+91 8341122405</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4 group hover:translate-x-2 transition-transform duration-300">
+                <a href="https://mail.google.com/mail/?view=cm&to=amenityforge@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 group hover:translate-x-2 transition-transform duration-300">
                   <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-3 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-yellow-400/30 flex-shrink-0">
                     <Mail className="w-5 h-5 lg:w-6 lg:h-6 text-black" />
                   </div>
@@ -236,7 +236,7 @@ const Contact = () => {
                     <p className="text-gray-300 text-xs sm:text-sm mb-1">Email</p>
                     <p className="text-white font-semibold text-base sm:text-lg group-hover:text-yellow-400 transition-colors duration-300 break-words">amenityforge@gmail.com</p>
                   </div>
-                </div>
+                </a>
                 <div className="flex items-center space-x-4 group hover:translate-x-2 transition-transform duration-300">
                   <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-3 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-yellow-400/30 flex-shrink-0">
                     <MapPin className="w-5 h-5 lg:w-6 lg:h-6 text-black" />
