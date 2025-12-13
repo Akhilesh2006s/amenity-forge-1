@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, Code, Smartphone, Cloud, Clock, CheckCircle, Sparkles } from 'lucide-react';
 
-const Hero = () => {
+const Home = () => {
   const services = [
     {
       icon: <Code className="w-6 h-6" />,
@@ -27,7 +27,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="min-h-screen bg-black pt-20 relative overflow-hidden">
+    <section id="home" className="min-h-screen bg-black pt-24 pb-16 relative overflow-hidden">
       {/* 3D Background Objects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Floating cubes */}
@@ -48,57 +48,68 @@ const Hero = () => {
         <div className="absolute bottom-80 left-60 w-6 h-6 bg-gradient-to-br from-yellow-400/15 to-orange-500/15 transform rotate-30 clip-path-hexagon animate-pulse" style={{animationDelay: '2.8s'}}></div>
       </div>
 
-      <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 lg:px-8 py-16 lg:py-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-Inter bold leading-tight">
-                <span className="text-white">Turn Your Vision</span>
-                <br />
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+          <div className="space-y-10">
+            <div className="space-y-8">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                <span className="text-white block mb-2">Turn Your Vision</span>
+                <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent block">
                   Into Digital Reality
                 </span>
               </h1>
               
-              <p className="text-xl text-gray-300 leading-relaxed max-w-2xl">
+              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl">
                 Your strategic digital partner providing comprehensive solutions from software development to digital marketing.
               </p>
               
-              <p className="text-lg font-semibold text-yellow-400">
+              <p className="text-base sm:text-lg lg:text-xl font-semibold text-yellow-400">
                 You Tell, We Implement.
               </p>
             </div>
 
+            {/* Company Tagline */}
+            <div className="bg-gradient-to-r from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-md px-5 py-4 sm:px-6 sm:py-5 rounded-xl border border-gray-700/50 w-fit max-w-full">
+              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed whitespace-normal">
+                Built within a Media & Education Excellence Ecosystem associated with{' '}
+                <span className="font-bold text-yellow-400">The Times Group</span>
+                {', and awarded '}
+                <span className="font-semibold italic text-yellow-400">'Best in AI Innovation'</span>
+                {' by '}
+                <span className="font-bold text-yellow-400">GTAP</span>
+                {' for delivering impactful products and services.'}
+              </p>
+            </div>
+
             {/* Benefits */}
-            <div className="space-y-4">
+            <div className="space-y-5">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-yellow-400 flex-shrink-0 mt-0.5" />
+                  <span className="text-base sm:text-lg text-gray-300 leading-relaxed">{benefit}</span>
                 </div>
               ))}
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-           <a href="/Services">
-  <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105 flex items-center justify-center space-x-2">
-    <span>Explore Services</span>
-    <ArrowRight className="w-5 h-5" />
-  </button>
-</a>
+            <div className="flex flex-col sm:flex-row gap-5 pt-4">
+              <a href="/Services">
+                <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg shadow-yellow-400/30">
+                  <span>Explore Services</span>
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </a>
 
-             <a
-  href="https://wa.me/918341122405?text=Hi%20AmenityForge%2C%20I%20need%20your%20service"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <button className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 hover:text-black transition-all flex items-center justify-center space-x-2">
-    <span>Call Now</span>
-  </button>
-</a>
-
+              <a
+                href="https://wa.me/918341122405?text=Hi%20AmenityForge%2C%20I%20need%20your%20service"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-bold text-base sm:text-lg hover:bg-yellow-400 hover:text-black transition-all flex items-center justify-center space-x-2">
+                  <span>Call Now</span>
+                </button>
+              </a>
             </div>
           </div>
 
@@ -112,15 +123,15 @@ const Hero = () => {
             {services.map((service, index) => (
               <div 
                 key={index}
-                className="bg-gradient-to-r from-gray-800/80 to-gray-700/80 backdrop-blur-sm p-6 rounded-2xl border border-gray-600 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/10 relative"
+                className="bg-gradient-to-r from-gray-800/80 to-gray-700/80 backdrop-blur-sm p-6 lg:p-8 rounded-2xl border border-gray-600 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/10 relative"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-3 rounded-lg">
+                <div className="flex items-start space-x-5">
+                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-3 lg:p-4 rounded-lg flex-shrink-0">
                     {service.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                    <p className="text-gray-300">{service.description}</p>
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 lg:mb-3">{service.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{service.description}</p>
                   </div>
                 </div>
               </div>
@@ -128,24 +139,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
-      {/* Bottom wave decoration */}
-      <div className="relative">
-        <svg viewBox="0 0 1440 200" className="w-full h-auto">
-          <path 
-            fill="url(#gradient)" 
-            d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,85.3C672,75,768,85,864,112C960,139,1056,181,1152,186.7C1248,192,1344,160,1392,144L1440,128L1440,200L1392,200C1344,200,1248,200,1152,200C1056,200,960,200,864,200C768,200,672,200,576,200C480,200,384,200,288,200C192,200,96,200,48,200L0,200Z"
-          />
-          <defs>
-            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#f9fafb" />
-              <stop offset="100%" stopColor="#e5e7eb" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
     </section>
   );
 };
 
-export default Hero;
+export default Home;

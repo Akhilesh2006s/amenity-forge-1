@@ -11,7 +11,7 @@ export default function Navbar() {
     { name: "Home", href: "/Home" },
     { name: "Products", href: "/ComingSoon" },
     { name: "Services", href: "/Services" },
-    { name: "Brochure", href: "/brochure" },
+    { name: "About", href: "/About" },
   ]
 
   return (
@@ -19,7 +19,7 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-white/10"
+      className="fixed top-0 left-0 right-0 z-50 glass border-b border-yellow-400/20 backdrop-blur-xl"
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
@@ -35,7 +35,7 @@ export default function Navbar() {
               alt="Logo"
               className="h-10 w-auto object-contain"
             />
-            <span className="text-lg md:text-xl font-semibold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-300 bg-clip-text text-transparent tracking-wide">
+            <span className="text-lg md:text-xl font-semibold bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent tracking-wide bg-[length:200%_auto] animate-gradient-shift">
               Amenity Forge
             </span>
           </motion.div>
@@ -49,10 +49,11 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                className="relative text-white/90 hover:text-yellow-400 transition-colors duration-300 text-sm md:text-base group"
+                className="relative text-white/90 hover:text-yellow-400 transition-all duration-300 text-sm md:text-base group px-2 py-1 rounded-lg"
               >
-                {item.name}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-yellow-300 to-yellow-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="relative z-10">{item.name}</span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 to-orange-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </motion.a>
             ))}
           </div>

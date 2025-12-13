@@ -5,9 +5,21 @@ export default function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => <Card key={card.src} card={card} index={index} />)
 
   return (
-    <div className="w-full min-h-screen bg-black py-20">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-white font-sans">Why Choose Us?</h2>
-      <Carousel items={cards} />
+    <div className="w-full bg-black py-24 lg:py-32 relative overflow-hidden">
+      {/* Pure black background */}
+      <div className="absolute inset-0 pointer-events-none">
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-16 lg:mb-20 animate-fade-in-up">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">
+            <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
+              Why Choose Us?
+            </span>
+          </h2>
+        </div>
+        <Carousel items={cards} />
+      </div>
     </div>
   )
 }

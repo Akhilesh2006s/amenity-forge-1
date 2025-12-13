@@ -59,52 +59,52 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-gray-100 to-white relative overflow-hidden">
-      {/* Floating Background Shapes */}
+    <section id="services" className="py-16 lg:py-24 bg-black relative overflow-hidden">
+      {/* Pure black background - no decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-16 left-8 w-6 h-6 bg-gradient-to-br from-gray-300/30 to-gray-400/30 transform rotate-45 animate-pulse"></div>
-        <div className="absolute top-32 right-12 w-8 h-8 bg-gradient-to-br from-gray-300/20 to-gray-400/20 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-32 left-16 w-10 h-10 bg-gradient-to-br from-gray-300/25 to-gray-400/25 transform -rotate-12 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-60 right-32 w-7 h-7 bg-gradient-to-br from-gray-300/20 to-gray-400/20 transform rotate-30 animate-bounce" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute bottom-60 right-8 w-5 h-5 bg-gradient-to-br from-gray-300/30 to-gray-400/30 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute top-80 left-32 w-0 h-0 border-l-4 border-r-4 border-b-8 border-l-transparent border-r-transparent border-b-gray-300/25 animate-bounce" style={{ animationDelay: '2.5s' }}></div>
-        <div className="absolute bottom-20 right-48 w-0 h-0 border-l-6 border-r-6 border-b-10 border-l-transparent border-r-transparent border-b-gray-400/20 animate-pulse" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute top-40 left-64 w-4 h-4 bg-gradient-to-br from-gray-300/20 to-gray-400/20 transform rotate-45 animate-pulse" style={{ animationDelay: '1.8s' }}></div>
-        <div className="absolute bottom-40 left-80 w-6 h-6 bg-gradient-to-br from-gray-300/25 to-gray-400/25 rounded-full animate-bounce" style={{ animationDelay: '2.3s' }}></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
-            Our Service Categories
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-12 lg:mb-16 animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 lg:mb-6">
+            <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
+              Our Service Categories
+            </span>
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
             We offer a comprehensive range of digital services to help your business thrive in the digital era.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="
-                p-6 rounded-2xl border transition-all duration-300 transform 
-                bg-gradient-to-br from-white to-gray-50 text-black border-gray-200 
+              className="group p-5 lg:p-6 rounded-2xl border transition-all duration-500 transform 
+                bg-gradient-to-br from-gray-800/80 to-gray-900/80 text-white border-gray-700/50 
                 hover:bg-gradient-to-br hover:from-yellow-400 hover:to-orange-500 
                 hover:text-black hover:border-yellow-400 
-                hover:shadow-lg hover:shadow-yellow-400/20 
-                hover:scale-105 cursor-pointer relative
-              "
+                hover:shadow-2xl hover:shadow-yellow-400/30 
+                hover:scale-110 hover:-translate-y-2 cursor-pointer relative overflow-hidden animate-fade-in-up backdrop-blur-sm"
+              style={{animationDelay: `${index * 0.1}s`}}
             >
-              <div className="mb-4 text-yellow-500 hover:text-black">
-                {service.icon}
+              {/* Shimmer effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+              
+              <div className="relative z-10">
+                <div className="mb-3 lg:mb-4 text-yellow-400 group-hover:text-black group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  {service.icon}
+                </div>
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-2 lg:mb-3 text-white group-hover:text-black transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-300 group-hover:text-black/90 transition-colors duration-300 leading-relaxed">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="text-lg font-bold mb-3 text-black">
-                {service.title}
-              </h3>
-              <p className="text-sm text-gray-600 hover:text-black/80">
-                {service.description}
-              </p>
+              
+              {/* Glow effect */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-yellow-400/0 via-yellow-400/20 to-yellow-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
             </div>
           ))}
         </div>

@@ -13,15 +13,13 @@ import Footer from "@/components/Amenity forge/footer"
 
 export default function BrochurePage() {
   return (
-    <section id="about" className="bg-black">
-          <Navbar />
-      
+    <div className="bg-black min-h-screen">
+      <Navbar />
       <Home />
-      <Service/>
+      <Service />
       <Hero />
-      <Contact/>
-      <Footer/>
-
-    </section>
+      <Contact />
+      <Footer />
+    </div>
   )
 }

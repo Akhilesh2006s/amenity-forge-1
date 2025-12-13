@@ -1,15 +1,15 @@
 "use client"
 
-import About from "@/components/Amenity forge/Employee"
+import About from "@/components/Amenity forge/About"
 import Navbar from "@/components/Amenity forge/navbar"
+import Footer from "@/components/Amenity forge/footer"
 
-
-export default function BrochurePage() {
+export default function AboutPage() {
   return (
-    <section id="about" className="bg-black">
-          <Navbar />
-      
+    <div className="bg-black min-h-screen">
+      <Navbar />
       <About />
-    </section>
+      <Footer />
+    </div>
   )
 }
