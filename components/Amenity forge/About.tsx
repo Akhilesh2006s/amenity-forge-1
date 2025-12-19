@@ -292,7 +292,7 @@ const About = () => {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="text-center mb-12 lg:mb-16 animate-fade-in-up">
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
-                Backed by <span className="font-bold text-yellow-400">Stanford-recognized top 1% global scientists</span> and accomplished <span className="font-bold text-yellow-400">PhD & MBA industry leaders</span>.
+                Backed by <span className="font-bold text-yellow-400">Stanford-recognized top 2% global scientists</span> and accomplished <span className="font-bold text-yellow-400">PhD & MBA industry leaders</span>.
               </p>
             </div>
 
