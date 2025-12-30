@@ -5,14 +5,14 @@ export default function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => <Card key={card.src} card={card} index={index} />)
 
   return (
-    <div className="w-full bg-black py-24 lg:py-32 relative overflow-hidden">
+    <div className="w-full bg-black py-14 lg:py-18 relative overflow-hidden">
       {/* Pure black background */}
       <div className="absolute inset-0 pointer-events-none">
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16 lg:mb-20 animate-fade-in-up">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">
+      <div className="container mx-auto px-5 lg:px-7 relative z-10">
+        <div className="text-center mb-10 lg:mb-12 animate-fade-in-up">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
               Why Choose Us?
             </span>
@@ -26,8 +26,8 @@ export default function AppleCardsCarouselDemo() {
 
 const ClientCentricContent = () => {
   return (
-    <div className="bg-black p-8 md:p-14 rounded-3xl mb-4">
-      <p className="text-white text-base md:text-2xl font-sans max-w-3xl mx-auto">
+    <div className="bg-black p-6 md:p-10 rounded-3xl mb-4">
+      <p className="text-white text-sm md:text-lg font-sans max-w-3xl mx-auto">
         <span className="font-bold text-white">Your success is our priority.</span> We take the time to understand your
         unique business needs, challenges, and goals. Our dedicated team works closely with you throughout every phase
         of the project, ensuring that our solutions are perfectly aligned with your vision and objectives.
@@ -38,8 +38,8 @@ const ClientCentricContent = () => {
 
 const ProvenTrackRecordContent = () => {
   return (
-    <div className="bg-black p-8 md:p-14 rounded-3xl mb-4">
-      <p className="text-white text-base md:text-2xl font-sans max-w-3xl mx-auto">
+    <div className="bg-black p-6 md:p-10 rounded-3xl mb-4">
+      <p className="text-white text-sm md:text-lg font-sans max-w-3xl mx-auto">
         <span className="font-bold text-white">Results speak louder than words.</span> With years of experience and
         hundreds of successful projects delivered, we have established ourselves as a trusted partner for businesses of
         all sizes. Our portfolio showcases innovative solutions that have driven real business growth and
@@ -51,8 +51,8 @@ const ProvenTrackRecordContent = () => {
 
 const ScalableSolutionsContent = () => {
   return (
-    <div className="bg-black p-8 md:p-14 rounded-3xl mb-4">
-      <p className="text-white text-base md:text-2xl font-sans max-w-3xl mx-auto">
+    <div className="bg-black p-6 md:p-10 rounded-3xl mb-4">
+      <p className="text-white text-sm md:text-lg font-sans max-w-3xl mx-auto">
         <span className="font-bold text-white">Built to grow with your business.</span> Our solutions are designed with
         scalability at their core. Whether you're a startup or an enterprise, our technology stack and architecture
         ensure that your systems can handle increased load, users, and complexity as your business expands.
@@ -63,8 +63,8 @@ const ScalableSolutionsContent = () => {
 
 const OnTimeDeliveryContent = () => {
   return (
-    <div className="bg-black p-8 md:p-14 rounded-3xl mb-4">
-      <p className="text-white text-base md:text-2xl font-sans max-w-3xl mx-auto">
+    <div className="bg-black p-6 md:p-10 rounded-3xl mb-4">
+      <p className="text-white text-sm md:text-lg font-sans max-w-3xl mx-auto">
         <span className="font-bold text-white">Deadlines are promises we keep.</span> We understand that time is
         critical in business. Our proven project management methodologies, clear communication channels, and efficient
         development processes ensure that we deliver high-quality solutions within the agreed timeframes, every time.
@@ -75,8 +75,8 @@ const OnTimeDeliveryContent = () => {
 
 const CompetitivePricingContent = () => {
   return (
-    <div className="bg-black p-8 md:p-14 rounded-3xl mb-4">
-      <p className="text-white text-base md:text-2xl font-sans max-w-3xl mx-auto">
+    <div className="bg-black p-6 md:p-10 rounded-3xl mb-4">
+      <p className="text-white text-sm md:text-lg font-sans max-w-3xl mx-auto">
         <span className="font-bold text-white">Premium quality at fair prices.</span> We believe that exceptional
         solutions shouldn't break the bank. Our transparent pricing model and efficient development processes allow us
         to offer competitive rates without compromising on quality, giving you the best value for your investment.

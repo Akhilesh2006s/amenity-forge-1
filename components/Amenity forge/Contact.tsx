@@ -72,32 +72,32 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-black relative overflow-hidden">
+    <section id="contact" className="py-10 lg:py-14 bg-black relative overflow-hidden">
       {/* Pure black background - no decorative elements */}
       <div className="absolute inset-0">
       </div>
       
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12 lg:mb-16 animate-fade-in-up">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 lg:mb-6">
+      <div className="container mx-auto px-5 lg:px-7 relative z-10">
+        <div className="text-center mb-8 lg:mb-10 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4">
             <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
               Get in Touch
             </span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
             Ready to transform your business with our digital solutions? Reach out to us today.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10">
           {/* Contact Form */}
-          <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-md p-6 lg:p-8 rounded-2xl border border-gray-700/50 shadow-2xl relative animate-fade-in-up hover:shadow-yellow-400/20 hover:border-yellow-400/50 transition-all duration-300" style={{animationDelay: '0.2s'}}>
-            <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-6 lg:mb-8">Send us a message</h3>
+          <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-md p-4 lg:p-6 rounded-xl border border-gray-700/50 shadow-2xl relative animate-fade-in-up hover:shadow-yellow-400/20 hover:border-yellow-400/50 transition-all duration-300" style={{animationDelay: '0.2s'}}>
+            <h3 className="text-base sm:text-lg font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-4 lg:mb-6">Send us a message</h3>
 
-            <form onSubmit={handleSubmit} className="space-y-5 lg:space-y-6">
-              <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
+            <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-5">
+              <div className="grid md:grid-cols-2 gap-4 lg:gap-5">
                 <div>
-                  <label htmlFor="fullName" className="block text-sm sm:text-base text-gray-300 mb-2 font-medium">
+                  <label htmlFor="fullName" className="block text-xs sm:text-sm text-gray-300 mb-1.5 font-medium">
                     Full Name
                   </label>
                   <input
@@ -107,11 +107,11 @@ const Contact = () => {
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 text-sm sm:text-base bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
+                    className="w-full px-3 py-2.5 text-xs sm:text-sm bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm sm:text-base text-gray-300 mb-2 font-medium">
+                  <label htmlFor="email" className="block text-xs sm:text-sm text-gray-300 mb-1.5 font-medium">
                     Email Address
                   </label>
                   <input
@@ -121,13 +121,13 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 text-sm sm:text-base bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
+                    className="w-full px-3 py-2.5 text-xs sm:text-sm bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm sm:text-base text-gray-300 mb-2 font-medium">
+                <label htmlFor="phone" className="block text-xs sm:text-sm text-gray-300 mb-1.5 font-medium">
                   Phone Number
                 </label>
                 <input
@@ -136,12 +136,12 @@ const Contact = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 text-sm sm:text-base bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
+                  className="w-full px-3 py-2.5 text-xs sm:text-sm bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
                 />
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm sm:text-base text-gray-300 mb-2 font-medium">
+                <label htmlFor="service" className="block text-xs sm:text-sm text-gray-300 mb-1.5 font-medium">
                   Service Interested In
                 </label>
                 <select
@@ -149,7 +149,7 @@ const Contact = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 text-sm sm:text-base bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
+                  className="w-full px-3 py-2.5 text-xs sm:text-sm bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
                 >
                   <option value="" className="bg-gray-800">Select a service</option>
                   <option value="software-development" className="bg-gray-800">Software Development</option>
@@ -163,7 +163,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm sm:text-base text-gray-300 mb-2 font-medium">
+                <label htmlFor="message" className="block text-xs sm:text-sm text-gray-300 mb-1.5 font-medium">
                   Message
                 </label>
                 <textarea
@@ -173,18 +173,18 @@ const Contact = () => {
                   onChange={handleChange}
                   rows={5}
                   required
-                  className="w-full px-4 py-3 text-sm sm:text-base bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 resize-none"
+                  className="w-full px-3 py-2.5 text-xs sm:text-sm bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 resize-none"
                 ></textarea>
               </div>
 
               {/* Status message */}
               {result && (
-                <div className={`p-3 rounded-lg text-sm sm:text-base ${result.includes("successfully") ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"}`}>
+                <div className={`p-2.5 rounded-lg text-xs sm:text-sm ${result.includes("successfully") ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"}`}>
                   <div className="flex items-center space-x-2">
                     {isSubmitting ? (
-                      <Loader2 className="w-5 h-5 animate-spin" />
+                      <Loader2 className="w-4 h-4 animate-spin" />
                     ) : (
-                      <CheckCircle className="w-5 h-5" />
+                      <CheckCircle className="w-4 h-4" />
                     )}
                     <span>{result}</span>
                   </div>
@@ -196,17 +196,17 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="relative w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 text-black py-3 lg:py-4 px-6 lg:px-8 rounded-lg font-bold text-sm sm:text-base transition-all transform hover:scale-105 flex items-center justify-center space-x-2 overflow-hidden shadow-lg shadow-yellow-400/50 hover:shadow-yellow-400/70 bg-[length:200%_auto] animate-gradient-shift disabled:opacity-50 disabled:cursor-not-allowed"
+                className="relative w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 text-black py-2.5 lg:py-3 px-5 lg:px-6 rounded-lg font-bold text-xs sm:text-sm transition-all transform hover:scale-105 flex items-center justify-center space-x-2 overflow-hidden shadow-lg shadow-yellow-400/50 hover:shadow-yellow-400/70 bg-[length:200%_auto] animate-gradient-shift disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
-                    <Loader2 className="w-5 h-5 animate-spin" />
+                    <Loader2 className="w-4 h-4 animate-spin" />
                     <span>Sending...</span>
                   </>
                 ) : (
                   <>
                     <span className="relative z-10">Send Message</span>
-                    <Send className="w-5 h-5 relative z-10" />
+                    <Send className="w-4 h-4 relative z-10" />
                   </>
                 )}
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-orange-600 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
@@ -215,57 +215,57 @@ const Contact = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-6 lg:space-y-8">
-            <div className="bg-gradient-to-br from-gray-800/90 to-black/90 backdrop-blur-md p-6 lg:p-8 rounded-2xl border border-gray-600/50 shadow-2xl relative animate-fade-in-up hover:border-yellow-400/50 transition-all duration-300" style={{animationDelay: '0.3s'}}>
-              <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-6 lg:mb-8">Contact Information</h3>
-              <div className="space-y-5 lg:space-y-6">
-                <div className="flex items-center space-x-4 group hover:translate-x-2 transition-transform duration-300">
-                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-3 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-yellow-400/30 flex-shrink-0">
-                    <Phone className="w-5 h-5 lg:w-6 lg:h-6 text-black" />
+          <div className="space-y-4 lg:space-y-6">
+            <div className="bg-gradient-to-br from-gray-800/90 to-black/90 backdrop-blur-md p-4 lg:p-6 rounded-xl border border-gray-600/50 shadow-2xl relative animate-fade-in-up hover:border-yellow-400/50 transition-all duration-300" style={{animationDelay: '0.3s'}}>
+              <h3 className="text-base sm:text-lg font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-4 lg:mb-6">Contact Information</h3>
+              <div className="space-y-3 lg:space-y-4">
+                <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
+                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-2.5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-yellow-400/30 flex-shrink-0">
+                    <Phone className="w-4 h-4 lg:w-5 lg:h-5 text-black" />
                   </div>
                   <div>
-                    <p className="text-gray-300 text-xs sm:text-sm mb-1">Phone</p>
-                    <p className="text-white font-semibold text-base sm:text-lg group-hover:text-yellow-400 transition-colors duration-300">+91 8341122405</p>
+                    <p className="text-gray-300 text-xs mb-0.5">Phone</p>
+                    <p className="text-white font-semibold text-sm sm:text-base group-hover:text-yellow-400 transition-colors duration-300">+91 8341122405</p>
                   </div>
                 </div>
-                <a href="https://mail.google.com/mail/?view=cm&to=amenityforge@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 group hover:translate-x-2 transition-transform duration-300">
-                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-3 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-yellow-400/30 flex-shrink-0">
-                    <Mail className="w-5 h-5 lg:w-6 lg:h-6 text-black" />
+                <a href="https://mail.google.com/mail/?view=cm&to=amenityforge@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
+                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-2.5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-yellow-400/30 flex-shrink-0">
+                    <Mail className="w-4 h-4 lg:w-5 lg:h-5 text-black" />
                   </div>
                   <div>
-                    <p className="text-gray-300 text-xs sm:text-sm mb-1">Email</p>
-                    <p className="text-white font-semibold text-base sm:text-lg group-hover:text-yellow-400 transition-colors duration-300 break-words">amenityforge@gmail.com</p>
+                    <p className="text-gray-300 text-xs mb-0.5">Email</p>
+                    <p className="text-white font-semibold text-sm sm:text-base group-hover:text-yellow-400 transition-colors duration-300 break-words">amenityforge@gmail.com</p>
                   </div>
                 </a>
-                <div className="flex items-center space-x-4 group hover:translate-x-2 transition-transform duration-300">
-                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-3 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-yellow-400/30 flex-shrink-0">
-                    <MapPin className="w-5 h-5 lg:w-6 lg:h-6 text-black" />
+                <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
+                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-2.5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-yellow-400/30 flex-shrink-0">
+                    <MapPin className="w-4 h-4 lg:w-5 lg:h-5 text-black" />
                   </div>
                   <div>
-                    <p className="text-gray-300 text-xs sm:text-sm mb-1">Address</p>
-                    <p className="text-white font-semibold text-base sm:text-lg group-hover:text-yellow-400 transition-colors duration-300">Hyderabad, Telangana, India</p>
+                    <p className="text-gray-300 text-xs mb-0.5">Address</p>
+                    <p className="text-white font-semibold text-sm sm:text-base group-hover:text-yellow-400 transition-colors duration-300">Hyderabad, Telangana, India</p>
                   </div>
                 </div>
               </div>
-              <div className="mt-6 lg:mt-8 pt-6 lg:pt-8 border-t border-gray-600/50">
-                <a href="tel:+918341122405" className="relative inline-block bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 text-black py-3 px-6 rounded-lg font-bold text-sm sm:text-base transition-all transform hover:scale-110 flex items-center space-x-2 overflow-hidden shadow-lg shadow-yellow-400/50 hover:shadow-yellow-400/70 bg-[length:200%_auto] animate-gradient-shift">
-                  <Phone className="w-5 h-5 relative z-10" />
+              <div className="mt-4 lg:mt-6 pt-4 lg:pt-6 border-t border-gray-600/50">
+                <a href="tel:+918341122405" className="relative inline-block bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 text-black py-2.5 px-5 rounded-lg font-bold text-xs sm:text-sm transition-all transform hover:scale-110 flex items-center space-x-2 overflow-hidden shadow-lg shadow-yellow-400/50 hover:shadow-yellow-400/70 bg-[length:200%_auto] animate-gradient-shift">
+                  <Phone className="w-4 h-4 relative z-10" />
                   <span className="relative z-10">Call Now</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-orange-600 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-gray-800/90 to-black/90 backdrop-blur-md p-8 rounded-2xl border border-gray-600/50 shadow-2xl relative animate-fade-in-up hover:border-yellow-400/50 transition-all duration-300" style={{animationDelay: '0.4s'}}>
-              <h3 className="text-2xl font-bold mb-6 flex items-center space-x-2">
-                <Clock className="w-6 h-6 text-yellow-400 animate-pulse" />
+            <div className="bg-gradient-to-br from-gray-800/90 to-black/90 backdrop-blur-md p-6 rounded-xl border border-gray-600/50 shadow-2xl relative animate-fade-in-up hover:border-yellow-400/50 transition-all duration-300" style={{animationDelay: '0.4s'}}>
+              <h3 className="text-lg font-bold mb-4 flex items-center space-x-2">
+                <Clock className="w-5 h-5 text-yellow-400 animate-pulse" />
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Business Hours</span>
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {businessHours.map((schedule, index) => (
                   <div key={index} className="flex justify-between items-center">
-                    <span className="text-gray-300">{schedule.day}</span>
-                    <span className={`font-semibold ${schedule.hours === 'Closed' ? 'text-red-400' : 'text-white'}`}>
+                    <span className="text-gray-300 text-sm">{schedule.day}</span>
+                    <span className={`font-semibold text-sm ${schedule.hours === 'Closed' ? 'text-red-400' : 'text-white'}`}>
                       {schedule.hours}
                     </span>
                   </div>

@@ -72,45 +72,45 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <div className="py-24 lg:py-32 bg-black relative overflow-hidden">
+    <div className="py-14 lg:py-18 bg-black relative overflow-hidden">
       {/* Pure black background */}
       <div className="absolute inset-0 pointer-events-none">
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16 lg:mb-20 animate-fade-in-up">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">
+      <div className="container mx-auto px-5 lg:px-7 relative z-10">
+        <div className="text-center mb-10 lg:mb-12 animate-fade-in-up">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
               Our Services
             </span>
           </h1>
-          <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed pt-2">
+          <p className="text-base lg:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed pt-2">
             Comprehensive solutions to transform your business with cutting-edge technology and expert execution
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}
               className="group relative animate-fade-in-up"
               style={{animationDelay: `${index * 0.1}s`}}
             >
-              <div className="relative bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-400/70 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/20 overflow-hidden h-full">
+              <div className="relative bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-4 rounded-xl border border-gray-700/50 hover:border-yellow-400/70 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/20 overflow-hidden h-full">
                 {/* Shimmer effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                 
                 <div className="relative z-10 h-full flex flex-col">
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-yellow-400 transition-colors duration-300">
+                  <h3 className="text-base font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 text-sm leading-relaxed flex-1 group-hover:text-gray-200 transition-colors duration-300">
+                  <p className="text-gray-300 text-xs leading-relaxed flex-1 group-hover:text-gray-200 transition-colors duration-300">
                     {service.description}
                   </p>
                 </div>
                 
                 {/* Glow effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-yellow-400/0 via-yellow-400/10 to-yellow-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-yellow-400/0 via-yellow-400/10 to-yellow-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
               </div>
             </div>
           ))}

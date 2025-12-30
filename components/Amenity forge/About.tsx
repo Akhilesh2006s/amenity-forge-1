@@ -6,7 +6,7 @@ const About = () => {
 
   const features = [
     {
-      icon: <Users className="w-6 h-6" />,
+      icon: <Users className="w-5 h-5" />,
       title: "Client-focused approach",
       description: "Putting your needs first in every project"
     },
@@ -28,71 +28,71 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 lg:py-32 bg-black relative overflow-hidden pt-24 lg:pt-32">
+    <section id="about" className="py-14 lg:py-18 bg-black relative overflow-hidden pt-14 lg:pt-18">
       {/* Pure black background */}
       <div className="absolute inset-0 pointer-events-none">
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+      <div className="container mx-auto px-5 lg:px-7 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-12 relative z-10">
-            <div className="space-y-8 animate-fade-in-up">
-              <h2 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="text-white block mb-3">About</span>
+          <div className="space-y-8 relative z-10">
+            <div className="space-y-5 animate-fade-in-up">
+              <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
+                <span className="text-white block mb-2">About</span>
                 <span className="block bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
                   Amenity Forge
                 </span>
               </h2>
             </div>
 
-            <div className="space-y-6 text-gray-300 relative animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <p className="text-xl lg:text-2xl leading-relaxed">
+            <div className="space-y-4 text-gray-300 relative animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              <p className="text-base lg:text-lg leading-relaxed">
                 <span className="font-semibold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">Amenity Forge</span> is a forward-thinking technology services company dedicated to helping businesses of all sizes leverage the power of digital innovation. Our comprehensive suite of services spans software development, digital marketing, cloud solutions, and much more.
               </p>
-              <p className="text-xl lg:text-2xl leading-relaxed pt-2">
+              <p className="text-base lg:text-lg leading-relaxed pt-2">
                 With our expert team and commitment to excellence, we translate your ideas into effective digital solutions. Our philosophy of <span className="font-semibold italic text-yellow-400">"You Tell, We Implement"</span> reflects our customer-centric approach and dedication to bringing your vision to life.
               </p>
             </div>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up pt-4" style={{animationDelay: '0.4s'}}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-in-up pt-3" style={{animationDelay: '0.4s'}}>
               {features.map((feature, index) => (
                 <div 
                   key={index}
                   onMouseEnter={() => setHoveredFeature(index)}
                   onMouseLeave={() => setHoveredFeature(null)}
-                  className="group relative bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-400/70 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/20 overflow-hidden"
+                  className="group relative bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-4 rounded-xl border border-gray-700/50 hover:border-yellow-400/70 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/20 overflow-hidden"
                 >
                   {/* Shimmer effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                   
-                  <div className="flex items-start space-x-4 relative z-10">
-                    <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-3 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-yellow-400/30">
+                  <div className="flex items-start space-x-3 relative z-10">
+                    <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-2 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-yellow-400/30">
                       <div className="text-black">{feature.icon}</div>
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-bold text-lg mb-2 text-white group-hover:text-yellow-400 transition-colors duration-300">
+                      <h4 className="font-bold text-base mb-1.5 text-white group-hover:text-yellow-400 transition-colors duration-300">
                         {feature.title}
                       </h4>
-                      <p className="text-sm text-gray-300 group-hover:text-gray-200 transition-colors duration-300 leading-relaxed">
+                      <p className="text-xs text-gray-300 group-hover:text-gray-200 transition-colors duration-300 leading-relaxed">
                         {feature.description}
                       </p>
                     </div>
                   </div>
                   
                   {/* Glow effect */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-yellow-400/0 via-yellow-400/10 to-yellow-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-yellow-400/0 via-yellow-400/10 to-yellow-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
                 </div>
               ))}
             </div>
 
-            <div className="animate-fade-in-up pt-6" style={{animationDelay: '0.6s'}}>
+            <div className="animate-fade-in-up pt-4" style={{animationDelay: '0.6s'}}>
               <a href="/Home#contact" className="group inline-block">
-                <button className="relative overflow-hidden bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 text-black px-8 py-4 rounded-full font-bold hover:shadow-2xl hover:shadow-yellow-400/50 transition-all duration-500 transform hover:scale-110 bg-[length:200%_auto] animate-gradient-shift">
+                <button className="relative overflow-hidden bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 text-black px-6 py-3 rounded-full font-bold hover:shadow-2xl hover:shadow-yellow-400/50 transition-all duration-500 transform hover:scale-110 bg-[length:200%_auto] animate-gradient-shift">
                   <span className="relative z-10 flex items-center">
                     Get in Touch
-                    <ChevronRight className="w-5 h-5 ml-2 transition-all duration-300 group-hover:translate-x-1" />
+                    <ChevronRight className="w-4 h-4 ml-2 transition-all duration-300 group-hover:translate-x-1" />
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </button>
@@ -135,15 +135,15 @@ const About = () => {
         </div>
 
         {/* About the Founder Section */}
-        <div className="mt-24 lg:mt-32 pt-16 lg:pt-20 border-t border-gray-700/50">
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="text-center mb-12 lg:mb-16 animate-fade-in-up">
-              <h3 className="text-3xl lg:text-4xl font-bold mb-4">
+        <div className="mt-14 lg:mt-18 pt-10 lg:pt-12 border-t border-gray-700/50">
+          <div className="container mx-auto px-5 lg:px-7">
+            <div className="text-center mb-8 lg:mb-10 animate-fade-in-up">
+              <h3 className="text-2xl lg:text-3xl font-bold mb-3">
                 <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
                   About the Founder
                 </span>
               </h3>
-              <h4 className="text-xl lg:text-2xl text-white font-semibold mb-8">
+              <h4 className="text-base lg:text-lg text-white font-semibold mb-6">
                 Shri Yasaswi
               </h4>
             </div>
@@ -288,10 +288,10 @@ const About = () => {
         </div>
 
         {/* Advisors & Leaders Section */}
-        <div className="mt-24 lg:mt-32 pt-16 lg:pt-20 border-t border-gray-700/50">
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="text-center mb-12 lg:mb-16 animate-fade-in-up">
-              <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+        <div className="mt-14 lg:mt-18 pt-10 lg:pt-12 border-t border-gray-700/50">
+          <div className="container mx-auto px-5 lg:px-7">
+            <div className="text-center mb-8 lg:mb-10 animate-fade-in-up">
+              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto">
                 Backed by <span className="font-bold text-yellow-400">Stanford-recognized top 2% global scientists</span> and accomplished <span className="font-bold text-yellow-400">PhD & MBA industry leaders</span>.
               </p>
             </div>

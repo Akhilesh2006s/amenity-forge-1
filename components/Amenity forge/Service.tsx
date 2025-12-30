@@ -7,7 +7,7 @@ import {
 const Services = () => {
   const services = [
     {
-      icon: <Code className="w-8 h-8" />,
+      icon: <Code className="w-5 h-5" />,
       title: "Software Development",
       description: "Custom applications built with modern technologies"
     },
@@ -59,28 +59,28 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-16 lg:py-24 bg-black relative overflow-hidden">
+    <section id="services" className="py-10 lg:py-14 bg-black relative overflow-hidden">
       {/* Pure black background - no decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
       </div>
 
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12 lg:mb-16 animate-fade-in-up">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 lg:mb-6">
+      <div className="container mx-auto px-5 lg:px-7 relative z-10">
+        <div className="text-center mb-8 lg:mb-10 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4">
             <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
               Our Service Categories
             </span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
             We offer a comprehensive range of digital services to help your business thrive in the digital era.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-5">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group p-5 lg:p-6 rounded-2xl border transition-all duration-500 transform 
+              className="group p-4 lg:p-5 rounded-xl border transition-all duration-500 transform 
                 bg-gradient-to-br from-gray-800/80 to-gray-900/80 text-white border-gray-700/50 
                 hover:bg-gradient-to-br hover:from-yellow-400 hover:to-orange-500 
                 hover:text-black hover:border-yellow-400 
@@ -92,10 +92,10 @@ const Services = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
               
               <div className="relative z-10">
-                <div className="mb-3 lg:mb-4 text-yellow-400 group-hover:text-black group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="mb-2 lg:mb-3 text-yellow-400 group-hover:text-black group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   {service.icon}
                 </div>
-                <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-2 lg:mb-3 text-white group-hover:text-black transition-colors duration-300">
+                <h3 className="text-sm sm:text-base lg:text-lg font-bold mb-1.5 lg:mb-2 text-white group-hover:text-black transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-300 group-hover:text-black/90 transition-colors duration-300 leading-relaxed">
@@ -104,7 +104,7 @@ const Services = () => {
               </div>
               
               {/* Glow effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-yellow-400/0 via-yellow-400/20 to-yellow-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-yellow-400/0 via-yellow-400/20 to-yellow-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
             </div>
           ))}
         </div>
