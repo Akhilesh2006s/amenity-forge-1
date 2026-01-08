@@ -72,14 +72,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-10 lg:py-14 bg-black relative overflow-hidden">
+    <section id="contact" className="py-8 sm:py-10 lg:py-12 bg-black relative overflow-hidden">
       {/* Pure black background - no decorative elements */}
       <div className="absolute inset-0">
       </div>
       
-      <div className="container mx-auto px-5 lg:px-7 relative z-10">
-        <div className="text-center mb-8 lg:mb-10 animate-fade-in-up">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4">
+      <div className="container mx-auto px-4 sm:px-5 lg:px-7 relative z-10">
+        <div className="text-center mb-5 sm:mb-6 lg:mb-8 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold mb-2 sm:mb-2 lg:mb-3">
             <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
               Get in Touch
             </span>
@@ -89,15 +89,15 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
           {/* Contact Form */}
-          <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-md p-4 lg:p-6 rounded-xl border border-gray-700/50 shadow-2xl relative animate-fade-in-up hover:shadow-yellow-400/20 hover:border-yellow-400/50 transition-all duration-300" style={{animationDelay: '0.2s'}}>
-            <h3 className="text-base sm:text-lg font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-4 lg:mb-6">Send us a message</h3>
+          <div className="bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-md p-4 sm:p-5 lg:p-6 rounded-xl border border-gray-700/50 shadow-2xl relative animate-fade-in-up hover:shadow-yellow-400/20 hover:border-yellow-400/50 transition-all duration-300" style={{animationDelay: '0.2s'}}>
+            <h3 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-4 sm:mb-5 lg:mb-6">Send us a message</h3>
 
-            <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-5">
-              <div className="grid md:grid-cols-2 gap-4 lg:gap-5">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-4 lg:space-y-5">
+              <div className="grid sm:grid-cols-2 gap-4 lg:gap-5">
                 <div>
-                  <label htmlFor="fullName" className="block text-xs sm:text-sm text-gray-300 mb-1.5 font-medium">
+                  <label htmlFor="fullName" className="block text-sm text-gray-300 mb-2 font-medium">
                     Full Name
                   </label>
                   <input
@@ -107,11 +107,11 @@ const Contact = () => {
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2.5 text-xs sm:text-sm bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
+                    className="w-full px-4 py-3 text-sm sm:text-base bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 min-h-[44px]"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-xs sm:text-sm text-gray-300 mb-1.5 font-medium">
+                  <label htmlFor="email" className="block text-sm text-gray-300 mb-2 font-medium">
                     Email Address
                   </label>
                   <input
@@ -121,13 +121,13 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2.5 text-xs sm:text-sm bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
+                    className="w-full px-4 py-3 text-sm sm:text-base bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 min-h-[44px]"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-xs sm:text-sm text-gray-300 mb-1.5 font-medium">
+                <label htmlFor="phone" className="block text-sm text-gray-300 mb-2 font-medium">
                   Phone Number
                 </label>
                 <input
@@ -136,12 +136,12 @@ const Contact = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-3 py-2.5 text-xs sm:text-sm bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
+                  className="w-full px-4 py-3 text-sm sm:text-base bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 min-h-[44px]"
                 />
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-xs sm:text-sm text-gray-300 mb-1.5 font-medium">
+                <label htmlFor="service" className="block text-sm text-gray-300 mb-2 font-medium">
                   Service Interested In
                 </label>
                 <select
@@ -149,7 +149,7 @@ const Contact = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-3 py-2.5 text-xs sm:text-sm bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300"
+                  className="w-full px-4 py-3 text-sm sm:text-base bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 min-h-[44px]"
                 >
                   <option value="" className="bg-gray-800">Select a service</option>
                   <option value="software-development" className="bg-gray-800">Software Development</option>
@@ -163,7 +163,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-xs sm:text-sm text-gray-300 mb-1.5 font-medium">
+                <label htmlFor="message" className="block text-sm text-gray-300 mb-2 font-medium">
                   Message
                 </label>
                 <textarea
@@ -173,18 +173,18 @@ const Contact = () => {
                   onChange={handleChange}
                   rows={5}
                   required
-                  className="w-full px-3 py-2.5 text-xs sm:text-sm bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 text-sm sm:text-base bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/20 transition-all duration-300 resize-none"
                 ></textarea>
               </div>
 
               {/* Status message */}
               {result && (
-                <div className={`p-2.5 rounded-lg text-xs sm:text-sm ${result.includes("successfully") ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"}`}>
+                <div className={`p-3 rounded-lg text-sm sm:text-base ${result.includes("successfully") ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"}`}>
                   <div className="flex items-center space-x-2">
                     {isSubmitting ? (
-                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <Loader2 className="w-5 h-5 animate-spin" />
                     ) : (
-                      <CheckCircle className="w-4 h-4" />
+                      <CheckCircle className="w-5 h-5" />
                     )}
                     <span>{result}</span>
                   </div>
@@ -196,17 +196,17 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="relative w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 text-black py-2.5 lg:py-3 px-5 lg:px-6 rounded-lg font-bold text-xs sm:text-sm transition-all transform hover:scale-105 flex items-center justify-center space-x-2 overflow-hidden shadow-lg shadow-yellow-400/50 hover:shadow-yellow-400/70 bg-[length:200%_auto] animate-gradient-shift disabled:opacity-50 disabled:cursor-not-allowed"
+                className="relative w-full bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 text-black py-3.5 sm:py-3 lg:py-4 px-6 lg:px-8 rounded-lg font-bold text-sm sm:text-base transition-all transform hover:scale-105 flex items-center justify-center space-x-2 overflow-hidden shadow-lg shadow-yellow-400/50 hover:shadow-yellow-400/70 bg-[length:200%_auto] animate-gradient-shift disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px]"
               >
                 {isSubmitting ? (
                   <>
-                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <Loader2 className="w-5 h-5 animate-spin" />
                     <span>Sending...</span>
                   </>
                 ) : (
                   <>
                     <span className="relative z-10">Send Message</span>
-                    <Send className="w-4 h-4 relative z-10" />
+                    <Send className="w-5 h-5 relative z-10" />
                   </>
                 )}
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-orange-600 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>

@@ -12,61 +12,61 @@ const Services = () => {
       description: "Custom applications built with modern technologies"
     },
     {
-      icon: <Smartphone className="w-8 h-8" />,
+      icon: <Smartphone className="w-5 h-5" />,
       title: "Web & Mobile",
       description: "Responsive websites and mobile applications"
     },
     {
-      icon: <Cloud className="w-8 h-8" />,
+      icon: <Cloud className="w-5 h-5" />,
       title: "Cloud Services",
       description: "Scalable cloud infrastructure and deployment"
     },
     {
-      icon: <Brain className="w-8 h-8" />,
+      icon: <Brain className="w-5 h-5" />,
       title: "AI & Machine Learning",
       description: "Intelligent solutions and data analytics"
     },
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-5 h-5" />,
       title: "Security",
       description: "Comprehensive cybersecurity solutions"
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
+      icon: <TrendingUp className="w-5 h-5" />,
       title: "Digital Marketing",
       description: "Growth-focused marketing strategies"
     },
     {
-      icon: <Palette className="w-8 h-8" />,
+      icon: <Palette className="w-5 h-5" />,
       title: "UI/UX Design",
       description: "User-centered design experiences"
     },
     {
-      icon: <Link className="w-8 h-8" />,
+      icon: <Link className="w-5 h-5" />,
       title: "Blockchain",
       description: "Decentralized applications and smart contracts"
     },
     {
-      icon: <Gamepad2 className="w-8 h-8" />,
+      icon: <Gamepad2 className="w-5 h-5" />,
       title: "Game Development",
       description: "Interactive gaming experiences"
     },
     {
-      icon: <HelpCircle className="w-8 h-8" />,
+      icon: <HelpCircle className="w-5 h-5" />,
       title: "IT Consulting",
       description: "Strategic technology guidance"
     }
   ];
 
   return (
-    <section id="services" className="py-10 lg:py-14 bg-black relative overflow-hidden">
+    <section id="services" className="pt-0 pb-0 bg-black relative overflow-hidden">
       {/* Pure black background - no decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
       </div>
 
-      <div className="container mx-auto px-5 lg:px-7 relative z-10">
-        <div className="text-center mb-8 lg:mb-10 animate-fade-in-up">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 lg:mb-4">
+      <div className="container mx-auto px-4 sm:px-5 lg:px-7 relative z-10">
+        <div className="text-center mb-3 sm:mb-4 lg:mb-6 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold mb-1.5 sm:mb-2 lg:mb-2">
             <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
               Our Service Categories
             </span>
@@ -76,16 +76,16 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group p-4 lg:p-5 rounded-xl border transition-all duration-500 transform 
+              className="group p-4 sm:p-4 lg:p-5 rounded-xl border transition-all duration-500 transform 
                 bg-gradient-to-br from-gray-800/80 to-gray-900/80 text-white border-gray-700/50 
                 hover:bg-gradient-to-br hover:from-yellow-400 hover:to-orange-500 
                 hover:text-black hover:border-yellow-400 
                 hover:shadow-2xl hover:shadow-yellow-400/30 
-                hover:scale-110 hover:-translate-y-2 cursor-pointer relative overflow-hidden animate-fade-in-up backdrop-blur-sm"
+                hover:scale-105 sm:hover:scale-110 hover:-translate-y-1 sm:hover:-translate-y-2 cursor-pointer relative overflow-hidden animate-fade-in-up backdrop-blur-sm"
               style={{animationDelay: `${index * 0.1}s`}}
             >
               {/* Shimmer effect */}

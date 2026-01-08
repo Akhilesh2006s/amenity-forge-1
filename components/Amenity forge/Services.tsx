@@ -72,24 +72,24 @@ const services = [
 
 export default function ServicesGrid() {
   return (
-    <div className="py-14 lg:py-18 bg-black relative overflow-hidden">
+    <div className="py-8 sm:py-10 lg:py-12 bg-black relative overflow-hidden">
       {/* Pure black background */}
       <div className="absolute inset-0 pointer-events-none">
       </div>
 
-      <div className="container mx-auto px-5 lg:px-7 relative z-10">
-        <div className="text-center mb-10 lg:mb-12 animate-fade-in-up">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6">
+      <div className="container mx-auto px-4 sm:px-5 lg:px-7 relative z-10">
+        <div className="text-center mb-6 sm:mb-8 lg:mb-10 animate-fade-in-up">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
               Our Services
             </span>
           </h1>
-          <p className="text-base lg:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed pt-2">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed pt-2 px-4">
             Comprehensive solutions to transform your business with cutting-edge technology and expert execution
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}

@@ -22,20 +22,20 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 glass border-b border-yellow-400/20 backdrop-blur-xl"
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo + Text */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center space-x-3"
+            className="flex items-center space-x-2 sm:space-x-3"
           >
             <img
               src="/logo1.jpg"
               alt="Logo"
-              className="h-10 w-auto object-contain"
+              className="h-8 w-auto sm:h-10 object-contain"
             />
-            <span className="text-lg md:text-xl font-semibold bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent tracking-wide bg-[length:200%_auto] animate-gradient-shift">
+            <span className="text-base sm:text-lg md:text-xl font-semibold bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent tracking-wide bg-[length:200%_auto] animate-gradient-shift">
               Amenity Forge
             </span>
           </motion.div>
@@ -64,7 +64,8 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white/80 hover:text-yellow-400 transition-colors duration-300"
+            className="md:hidden text-white/80 hover:text-yellow-400 transition-colors duration-300 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
+            aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
@@ -77,7 +78,7 @@ export default function Navbar() {
           transition={{ duration: 0.3 }}
           className="md:hidden overflow-hidden"
         >
-          <div className="py-4 space-y-4">
+          <div className="py-4 space-y-2">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
@@ -85,7 +86,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="block text-white/90 hover:text-yellow-400 transition-colors duration-300 py-2"
+                className="block text-white/90 hover:text-yellow-400 transition-colors duration-300 py-3 px-2 text-base min-h-[44px] flex items-center"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}

@@ -29,36 +29,36 @@ const ProductsSection = () => {
   ];
 
   return (
-    <section className="py-14 lg:py-18 px-5 bg-black relative overflow-hidden pt-14 lg:pt-18">
+    <section className="py-8 sm:py-10 lg:py-12 px-4 sm:px-5 bg-black relative overflow-hidden pt-8 sm:pt-10 lg:pt-12">
       {/* Pure black background - no decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
       </div>
       
       <div className="container mx-auto relative z-10">
-        <div className="text-center mb-10 lg:mb-12 animate-fade-in-up">
-          <div className="flex items-center justify-center mb-6">
+        <div className="text-center mb-6 sm:mb-8 lg:mb-10 animate-fade-in-up">
+          <div className="flex items-center justify-center mb-4 sm:mb-6">
             <div className="relative">
-              <Zap className="h-5 w-5 text-yellow-400 mr-2 animate-pulse" />
-              <div className="absolute inset-0 h-5 w-5 text-yellow-400/50 blur-sm animate-pulse"></div>
+              <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-400 mr-2 animate-pulse" />
+              <div className="absolute inset-0 h-5 w-5 sm:h-6 sm:w-6 text-yellow-400/50 blur-sm animate-pulse"></div>
             </div>
-            <span className="text-sm font-medium bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent tracking-wider uppercase bg-[length:200%_auto] animate-gradient-shift">Our Products</span>
+            <span className="text-sm sm:text-base font-medium bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent tracking-wider uppercase bg-[length:200%_auto] animate-gradient-shift">Our Products</span>
             <div className="relative ml-2">
-              <Sparkles className="h-5 w-5 text-yellow-400 animate-pulse" />
-              <div className="absolute inset-0 h-5 w-5 text-yellow-400/50 blur-sm animate-pulse"></div>
+              <Sparkles className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-400 animate-pulse" />
+              <div className="absolute inset-0 h-5 w-5 sm:h-6 sm:w-6 text-yellow-400/50 blur-sm animate-pulse"></div>
             </div>
           </div>
           
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent leading-tight bg-[length:200%_auto] animate-gradient-shift animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent leading-tight bg-[length:200%_auto] animate-gradient-shift animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             Revolutionary Solutions
           </h2>
-          <p className="text-base lg:text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed animate-fade-in-up pt-2" style={{animationDelay: '0.4s'}}>
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed animate-fade-in-up pt-1 px-4" style={{animationDelay: '0.4s'}}>
             Discover our suite of 
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent font-semibold"> AI-powered solutions </span>
             designed to transform your operations and education systems.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
           {products.map((product, index) => (
             <ProductCard
               key={index}
@@ -72,9 +72,9 @@ const ProductsSection = () => {
       </div>
 
       {/* Delivered with Impact Section */}
-      <div className="mt-14 lg:mt-18 pt-10 lg:pt-12 border-t border-gray-700/50">
+      <div className="mt-10 lg:mt-12 pt-6 lg:pt-8 border-t border-gray-700/50">
         <div className="container mx-auto px-5 lg:px-7">
-          <div className="text-center mb-8 lg:mb-10 animate-fade-in-up">
+          <div className="text-center mb-6 lg:mb-8 animate-fade-in-up">
             <h3 className="text-2xl lg:text-3xl font-bold mb-3">
               <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
                 Delivered with Impact

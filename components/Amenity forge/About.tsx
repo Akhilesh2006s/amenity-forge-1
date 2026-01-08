@@ -28,16 +28,16 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-14 lg:py-18 bg-black relative overflow-hidden pt-14 lg:pt-18">
+    <section id="about" className="py-8 sm:py-10 lg:py-12 bg-black relative overflow-hidden pt-8 sm:pt-10 lg:pt-12">
       {/* Pure black background */}
       <div className="absolute inset-0 pointer-events-none">
       </div>
 
       <div className="container mx-auto px-5 lg:px-7 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-center">
           {/* Left Content */}
-          <div className="space-y-8 relative z-10">
-            <div className="space-y-5 animate-fade-in-up">
+          <div className="space-y-5 sm:space-y-6 relative z-10">
+            <div className="space-y-3 sm:space-y-4 animate-fade-in-up">
               <h2 className="text-3xl lg:text-5xl font-bold leading-tight">
                 <span className="text-white block mb-2">About</span>
                 <span className="block bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
@@ -135,9 +135,9 @@ const About = () => {
         </div>
 
         {/* About the Founder Section */}
-        <div className="mt-14 lg:mt-18 pt-10 lg:pt-12 border-t border-gray-700/50">
+        <div className="mt-10 lg:mt-12 pt-6 lg:pt-8 border-t border-gray-700/50">
           <div className="container mx-auto px-5 lg:px-7">
-            <div className="text-center mb-8 lg:mb-10 animate-fade-in-up">
+            <div className="text-center mb-6 lg:mb-8 animate-fade-in-up">
               <h3 className="text-2xl lg:text-3xl font-bold mb-3">
                 <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
                   About the Founder
@@ -288,9 +288,9 @@ const About = () => {
         </div>
 
         {/* Advisors & Leaders Section */}
-        <div className="mt-14 lg:mt-18 pt-10 lg:pt-12 border-t border-gray-700/50">
+        <div className="mt-10 lg:mt-12 pt-6 lg:pt-8 border-t border-gray-700/50">
           <div className="container mx-auto px-5 lg:px-7">
-            <div className="text-center mb-8 lg:mb-10 animate-fade-in-up">
+            <div className="text-center mb-6 lg:mb-8 animate-fade-in-up">
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto">
                 Backed by <span className="font-bold text-yellow-400">Stanford-recognized top 2% global scientists</span> and accomplished <span className="font-bold text-yellow-400">PhD & MBA industry leaders</span>.
               </p>
