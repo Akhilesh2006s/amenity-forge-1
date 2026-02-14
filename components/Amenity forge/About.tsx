@@ -28,7 +28,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-8 sm:py-10 lg:py-12 bg-black relative overflow-hidden pt-8 sm:pt-10 lg:pt-12">
+    <section id="about" className="py-8 sm:py-10 lg:py-12 bg-black relative overflow-hidden pt-20 sm:pt-24 lg:pt-28">
       {/* Pure black background */}
       <div className="absolute inset-0 pointer-events-none">
       </div>
@@ -56,7 +56,7 @@ const About = () => {
             </div>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-in-up pt-3" style={{animationDelay: '0.4s'}}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 animate-fade-in-up pt-3" style={{animationDelay: '0.4s'}}>
               {features.map((feature, index) => (
                 <div 
                   key={index}
@@ -114,8 +114,8 @@ const About = () => {
             </div>
             
             {/* Testimonial Overlay */}
-            <div className="absolute -bottom-10 -left-10 bg-gradient-to-br from-gray-800/95 via-gray-700/95 to-gray-800/95 backdrop-blur-md p-6 rounded-2xl border border-gray-700/50 shadow-2xl max-w-sm hover:shadow-yellow-400/30 hover:border-yellow-400/50 transition-all duration-300 group">
-              <div className="absolute -top-4 -right-4 w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+            <div className="absolute -bottom-10 -right-10 bg-gradient-to-br from-gray-800/95 via-gray-700/95 to-gray-800/95 backdrop-blur-md p-6 rounded-2xl border border-gray-700/50 shadow-2xl max-w-sm hover:shadow-yellow-400/30 hover:border-yellow-400/50 transition-all duration-300 group">
+              <div className="absolute -top-4 -left-4 w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
                 <Star className="w-5 h-5 text-black fill-current" />
               </div>
               <div className="flex items-center mb-3">
@@ -135,78 +135,100 @@ const About = () => {
         </div>
 
         {/* About the Founder Section */}
-        <div className="mt-10 lg:mt-12 pt-6 lg:pt-8 border-t border-gray-700/50">
-          <div className="container mx-auto px-5 lg:px-7">
-            <div className="text-center mb-6 lg:mb-8 animate-fade-in-up">
-              <h3 className="text-2xl lg:text-3xl font-bold mb-3">
+        <div className="mt-6 lg:mt-8 pt-4 lg:pt-5 border-t border-gray-700/50">
+          <div className="container mx-auto px-4 lg:px-5">
+            <div className="text-center mb-4 lg:mb-5 animate-fade-in-up">
+              <h3 className="text-xl lg:text-2xl font-bold mb-2">
                 <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
                   About the Founder
                 </span>
               </h3>
-              <h4 className="text-base lg:text-lg text-white font-semibold mb-6">
+              <h4 className="text-sm lg:text-base text-white font-semibold mb-4">
                 Shri Yasaswi
               </h4>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start">
               {/* Left Side - Image/Icon */}
               <div className="relative animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl group border border-gray-700/50">
+                <div className="relative rounded-xl overflow-hidden shadow-xl group border border-gray-700/50 mb-4">
                   <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <img 
                     src="/founder.png" 
                     alt="Shri Yasaswi - Founder & CEO"
-                    className="w-full h-[400px] lg:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-[280px] lg:h-[320px] object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500"></div>
+                  {/* Decorative badge */}
+                  <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-yellow-400 to-orange-500 p-2.5 rounded-full shadow-xl border-2 border-black z-10">
+                    <Award className="w-5 h-5 text-black" />
+                  </div>
                 </div>
-                {/* Decorative badge */}
-                <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-yellow-400 to-orange-500 p-4 rounded-full shadow-2xl border-4 border-black">
-                  <Award className="w-8 h-8 text-black" />
+                
+                {/* Screenshot image below founder photo */}
+                <div className="relative mt-4 rounded-xl overflow-hidden shadow-xl group border border-gray-700/50">
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <img 
+                    src="/founder-screenshot.png" 
+                    alt="Founder"
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-500"></div>
+                </div>
+                
+                {/* Team presentation image */}
+                <div className="relative mt-4 rounded-xl overflow-hidden shadow-xl group border border-gray-700/50">
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <img 
+                    src="/team-presentation.png" 
+                    alt="Team Presentation"
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-500"></div>
                 </div>
               </div>
 
               {/* Right Side - Text Content */}
-              <div className="space-y-6 text-gray-300 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-                <p className="text-base lg:text-lg leading-relaxed">
+              <div className="space-y-4 text-gray-300 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+                <p className="text-sm lg:text-base leading-relaxed">
                   Shri Yasaswi is a young technology entrepreneur, AI innovator, and student founder with a strong focus on building scalable, impact-driven digital products at the intersection of Artificial Intelligence, Education, and Media.
                 </p>
 
-                <p className="text-base lg:text-lg leading-relaxed">
+                <p className="text-sm lg:text-base leading-relaxed">
                   As the <span className="font-semibold text-yellow-400">Founder & CEO of AmenityForge</span>, Shri Yasaswi leads the vision of creating a next-generation ecosystem that delivers AI-powered tools, platforms, and services designed for students, creators, businesses, and institutions. His work emphasizes practical AI adoption, affordability, and real-world usability rather than experimental concepts.
                 </p>
 
-                <p className="text-base lg:text-lg leading-relaxed">
+                <p className="text-sm lg:text-base leading-relaxed">
                   Shri Yasaswi's entrepreneurial journey began early, driven by a deep interest in AI engineering, product architecture, and business strategy. He has successfully conceptualized and executed multiple technology initiatives, including AI-based platforms, educational products, and digital solutions, while simultaneously pursuing his academic path.
                 </p>
 
-                <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-6 lg:p-8 rounded-2xl border border-gray-700/50 mt-8">
-                  <h5 className="text-lg lg:text-xl font-bold text-white mb-4">His flagship initiatives focus on:</h5>
-                  <ul className="space-y-3 text-base lg:text-lg">
+                <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-4 lg:p-5 rounded-xl border border-gray-700/50 mt-4">
+                  <h5 className="text-base lg:text-lg font-bold text-white mb-3">His flagship initiatives focus on:</h5>
+                  <ul className="space-y-2 text-sm lg:text-base">
                     <li className="flex items-start">
-                      <span className="text-yellow-400 mr-3 mt-1">•</span>
+                      <span className="text-yellow-400 mr-2 mt-0.5">•</span>
                       <span>AI tools and platforms across multiple verticals</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-yellow-400 mr-3 mt-1">•</span>
+                      <span className="text-yellow-400 mr-2 mt-0.5">•</span>
                       <span>EdTech innovation, especially for school-level and early learners</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-yellow-400 mr-3 mt-1">•</span>
+                      <span className="text-yellow-400 mr-2 mt-0.5">•</span>
                       <span>Scalable SaaS and digital products with long-term commercial viability</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-yellow-400 mr-3 mt-1">•</span>
+                      <span className="text-yellow-400 mr-2 mt-0.5">•</span>
                       <span>Media and content-driven technology integration</span>
                     </li>
                   </ul>
                 </div>
 
-                <p className="text-base lg:text-lg leading-relaxed">
+                <p className="text-sm lg:text-base leading-relaxed">
                   AmenityForge is built within a Media & Education Excellence ecosystem associated with <span className="font-bold text-yellow-400">The Times Group</span>, reflecting a commitment to quality, credibility, and industry-aligned standards. Shri Yasaswi also brings experience from the media and music domain, with creative works officially released under <span className="font-bold text-yellow-400">T-Series</span>, India's leading music and entertainment label — demonstrating his ability to bridge technology, creativity, and mass platforms.
                 </p>
 
-                <p className="text-base lg:text-lg leading-relaxed">
+                <p className="text-sm lg:text-base leading-relaxed">
                   With a long-term vision of building globally relevant AI-first companies, Shri Yasaswi aims to scale AmenityForge into a trusted technology brand while contributing to India's growing startup and innovation ecosystem.
                 </p>
               </div>
@@ -215,22 +237,22 @@ const About = () => {
         </div>
 
         {/* Team Members Section */}
-        <div className="mt-24 lg:mt-32 pt-16 lg:pt-20 border-t border-gray-700/50">
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="text-center mb-12 lg:mb-16 animate-fade-in-up">
-              <h3 className="text-3xl lg:text-4xl font-bold mb-4">
+        <div className="mt-8 lg:mt-10 pt-6 lg:pt-8 border-t border-gray-700/50">
+          <div className="container mx-auto px-4 lg:px-5">
+            <div className="text-center mb-6 lg:mb-8 animate-fade-in-up">
+              <h3 className="text-xl lg:text-2xl font-bold mb-3">
                 <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
                   Leadership Team
                 </span>
               </h3>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
+            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
               {/* Chelluri Bhavya Madhav */}
-              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-6 lg:p-8 rounded-2xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                <div className="flex flex-col items-center text-center mb-6">
-                  <div className="relative mb-6">
-                    <div className="relative rounded-2xl overflow-hidden shadow-xl group border-2 border-gray-600/50 w-[200px] h-[250px] lg:w-[250px] lg:h-[300px]">
+              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-4 lg:p-5 rounded-xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+                <div className="flex flex-col items-center text-center mb-4">
+                  <div className="relative mb-4">
+                    <div className="relative rounded-xl overflow-hidden shadow-lg group border-2 border-gray-600/50 w-[150px] h-[180px] lg:w-[180px] lg:h-[220px]">
                       <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <img 
                         src="/BhavyaMadhav.jpg" 
@@ -239,27 +261,27 @@ const About = () => {
                       />
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500"></div>
                     </div>
-                    <div className="absolute -bottom-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 p-3 rounded-full shadow-lg border-2 border-black">
-                      <Lightbulb className="w-5 h-5 text-black" />
+                    <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 p-2 rounded-full shadow-lg border-2 border-black">
+                      <Lightbulb className="w-4 h-4 text-black" />
                     </div>
                   </div>
-                  <h4 className="text-xl lg:text-2xl font-bold text-white mb-2">
+                  <h4 className="text-lg lg:text-xl font-bold text-white mb-1.5">
                     Chelluri Bhavya Madhav
                   </h4>
-                  <p className="text-base lg:text-lg font-semibold text-yellow-400 mb-4">
+                  <p className="text-sm lg:text-base font-semibold text-yellow-400 mb-3">
                     Technology Oversight & Architecture
                   </p>
                 </div>
-                <p className="text-sm lg:text-base text-gray-300 leading-relaxed text-center">
+                <p className="text-xs lg:text-sm text-gray-300 leading-relaxed text-center">
                   Leads the overall technology vision with a strong focus on data science and AI, overseeing system architecture, data pipelines, and technical governance to deliver scalable, secure, and future-ready platforms across products and services.
                 </p>
               </div>
 
               {/* Akhilesh */}
-              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-6 lg:p-8 rounded-2xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-                <div className="flex flex-col items-center text-center mb-6">
-                  <div className="relative mb-6">
-                    <div className="relative rounded-2xl overflow-hidden shadow-xl group border-2 border-gray-600/50 w-[200px] h-[250px] lg:w-[250px] lg:h-[300px]">
+              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-4 lg:p-5 rounded-xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+                <div className="flex flex-col items-center text-center mb-4">
+                  <div className="relative mb-4">
+                    <div className="relative rounded-xl overflow-hidden shadow-lg group border-2 border-gray-600/50 w-[150px] h-[180px] lg:w-[180px] lg:h-[220px]">
                       <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <img 
                         src="/Akhilesh.png" 
@@ -268,18 +290,18 @@ const About = () => {
                       />
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500"></div>
                     </div>
-                    <div className="absolute -bottom-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 p-3 rounded-full shadow-lg border-2 border-black">
-                      <Target className="w-5 h-5 text-black" />
+                    <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 p-2 rounded-full shadow-lg border-2 border-black">
+                      <Target className="w-4 h-4 text-black" />
                     </div>
                   </div>
-                  <h4 className="text-xl lg:text-2xl font-bold text-white mb-2">
+                  <h4 className="text-lg lg:text-xl font-bold text-white mb-1.5">
                     Akhilesh
                   </h4>
-                  <p className="text-base lg:text-lg font-semibold text-yellow-400 mb-4">
+                  <p className="text-sm lg:text-base font-semibold text-yellow-400 mb-3">
                     DevOps and Service Operations Lead
                   </p>
                 </div>
-                <p className="text-sm lg:text-base text-gray-300 leading-relaxed text-center">
+                <p className="text-xs lg:text-sm text-gray-300 leading-relaxed text-center">
                   Leads DevOps and service operations with a focus on reliability, scalability, and performance, managing cloud infrastructure, CI/CD pipelines, and operational workflows to ensure seamless delivery and stability of digital products and services.
                 </p>
               </div>
@@ -288,20 +310,20 @@ const About = () => {
         </div>
 
         {/* Advisors & Leaders Section */}
-        <div className="mt-10 lg:mt-12 pt-6 lg:pt-8 border-t border-gray-700/50">
-          <div className="container mx-auto px-5 lg:px-7">
-            <div className="text-center mb-6 lg:mb-8 animate-fade-in-up">
-              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-4xl mx-auto">
+        <div className="mt-6 lg:mt-8 pt-4 lg:pt-5 border-t border-gray-700/50">
+          <div className="container mx-auto px-4 lg:px-5">
+            <div className="text-center mb-4 lg:mb-5 animate-fade-in-up">
+              <p className="text-xs sm:text-sm lg:text-base text-gray-300 leading-relaxed max-w-3xl mx-auto">
                 Backed by <span className="font-bold text-yellow-400">Stanford-recognized top 2% global scientists</span> and accomplished <span className="font-bold text-yellow-400">PhD & MBA industry leaders</span>.
               </p>
             </div>
 
             {/* 8 Small Image Boxes */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6 lg:gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-3 lg:gap-4 max-w-3xl mx-auto">
               {[...Array(8)].map((_, index) => (
                 <div 
                   key={index}
-                  className="group relative bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md rounded-xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 overflow-hidden animate-fade-in-up"
+                  className="group relative bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md rounded-lg border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 overflow-hidden animate-fade-in-up"
                   style={{animationDelay: `${index * 0.1}s`}}
                 >
                   <div className="aspect-square relative w-full">
@@ -313,8 +335,8 @@ const About = () => {
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/5 transition-all duration-500"></div>
                     {/* Decorative corner badge */}
-                    <div className="absolute top-3 right-3 bg-gradient-to-r from-yellow-400 to-orange-500 p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <Award className="w-4 h-4 text-black" />
+                    <div className="absolute top-2 right-2 bg-gradient-to-r from-yellow-400 to-orange-500 p-1.5 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <Award className="w-3 h-3 text-black" />
                     </div>
                   </div>
                 </div>
@@ -324,92 +346,92 @@ const About = () => {
         </div>
 
         {/* Scientific Advisory Board Section */}
-        <div className="mt-24 lg:mt-32 pt-16 lg:pt-20 border-t border-gray-700/50">
-          <div className="container mx-auto px-6 lg:px-8">
-            <div className="text-center mb-12 lg:mb-16 animate-fade-in-up">
-              <h3 className="text-3xl lg:text-4xl font-bold mb-4">
+        <div className="mt-8 lg:mt-10 pt-6 lg:pt-8 border-t border-gray-700/50">
+          <div className="container mx-auto px-4 lg:px-5">
+            <div className="text-center mb-6 lg:mb-8 animate-fade-in-up">
+              <h3 className="text-xl lg:text-2xl font-bold mb-3">
                 <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
                   Scientific Advisory Board
                 </span>
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 max-w-6xl mx-auto">
               {/* Dr. Karnika Dwivedi */}
-              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-                <h4 className="text-lg lg:text-xl font-bold text-white mb-2">Dr. Karnika Dwivedi</h4>
-                <p className="text-sm lg:text-base text-yellow-400 font-semibold mb-3">
+              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-4 rounded-xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+                <h4 className="text-base lg:text-lg font-bold text-white mb-1.5">Dr. Karnika Dwivedi</h4>
+                <p className="text-xs lg:text-sm text-yellow-400 font-semibold mb-2">
                   <span className="hidden md:inline">Ph.D. in Artificial Intelligence</span>
                   <span className="md:hidden">Ph.D. AI</span>
                 </p>
-                <p className="text-sm lg:text-base text-gray-300">
+                <p className="text-xs lg:text-sm text-gray-300">
                   <span className="hidden md:inline">Research Scientist | 15 Publications</span>
                   <span className="md:hidden">15 Publications</span>
                 </p>
               </div>
 
               {/* Dr. Uphar Singh */}
-              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                <h4 className="text-lg lg:text-xl font-bold text-white mb-2">Dr. Uphar Singh</h4>
-                <p className="text-sm lg:text-base text-yellow-400 font-semibold mb-3">
+              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-4 rounded-xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+                <h4 className="text-base lg:text-lg font-bold text-white mb-1.5">Dr. Uphar Singh</h4>
+                <p className="text-xs lg:text-sm text-yellow-400 font-semibold mb-2">
                   <span className="hidden md:inline">Ph.D. | M.Tech (Data Science)</span>
                   <span className="md:hidden">Ph.D. Data Science</span>
                 </p>
-                <p className="text-sm lg:text-base text-gray-300">
+                <p className="text-xs lg:text-sm text-gray-300">
                   <span className="hidden md:inline">Research Scientist | 7 Publications</span>
                   <span className="md:hidden">7 Publications</span>
                 </p>
               </div>
 
               {/* Dr. Sidharth Quamara */}
-              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-                <h4 className="text-lg lg:text-xl font-bold text-white mb-2">Dr. Sidharth Quamara</h4>
-                <p className="text-sm lg:text-base text-yellow-400 font-semibold mb-3">Ph.D. in Blockchain (NIT)</p>
-                <p className="text-sm lg:text-base text-gray-300">MHRD Fellowship Awardee</p>
+              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-4 rounded-xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+                <h4 className="text-base lg:text-lg font-bold text-white mb-1.5">Dr. Sidharth Quamara</h4>
+                <p className="text-xs lg:text-sm text-yellow-400 font-semibold mb-2">Ph.D. in Blockchain (NIT)</p>
+                <p className="text-xs lg:text-sm text-gray-300">MHRD Fellowship Awardee</p>
               </div>
 
               {/* Dr. Amit Soni */}
-              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-                <h4 className="text-lg lg:text-xl font-bold text-white mb-2">Dr. Amit Soni</h4>
-                <p className="text-sm lg:text-base text-yellow-400 font-semibold mb-3">
+              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-4 rounded-xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+                <h4 className="text-base lg:text-lg font-bold text-white mb-1.5">Dr. Amit Soni</h4>
+                <p className="text-xs lg:text-sm text-yellow-400 font-semibold mb-2">
                   <span className="hidden md:inline">Ph.D. in Artificial Intelligence (IIT) | M.Tech</span>
                   <span className="md:hidden">Ph.D. AI (IIT) | Researcher</span>
                 </p>
-                <p className="text-sm lg:text-base text-gray-300">
+                <p className="text-xs lg:text-sm text-gray-300">
                   <span className="hidden md:inline">Research Scientist | 3 Publications</span>
                   <span className="md:hidden">3 Publications</span>
                 </p>
               </div>
 
               {/* Dr. Ankith Kumar Pandey */}
-              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-                <h4 className="text-lg lg:text-xl font-bold text-white mb-2">Dr. Ankith Kumar Pandey</h4>
-                <p className="text-sm lg:text-base text-yellow-400 font-semibold mb-3">
+              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-4 rounded-xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+                <h4 className="text-base lg:text-lg font-bold text-white mb-1.5">Dr. Ankith Kumar Pandey</h4>
+                <p className="text-xs lg:text-sm text-yellow-400 font-semibold mb-2">
                   <span className="hidden md:inline">Stanford-Recognized | World's Top 2% Scientist</span>
                   <span className="md:hidden">Top 2% Scientist | Stanford-Recognized</span>
                 </p>
-                <p className="text-sm lg:text-base text-gray-300">Research & Academic Advisor</p>
+                <p className="text-xs lg:text-sm text-gray-300">Research & Academic Advisor</p>
               </div>
 
               {/* Dr. Avinash Upadhyay */}
-              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-                <h4 className="text-lg lg:text-xl font-bold text-white mb-2">Dr. Avinash Upadhyay</h4>
-                <p className="text-sm lg:text-base text-yellow-400 font-semibold mb-3">Ph.D. | M.S. (KU)</p>
-                <p className="text-sm lg:text-base text-gray-300">Research & Technology Advisor</p>
+              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-4 rounded-xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+                <h4 className="text-base lg:text-lg font-bold text-white mb-1.5">Dr. Avinash Upadhyay</h4>
+                <p className="text-xs lg:text-sm text-yellow-400 font-semibold mb-2">Ph.D. | M.S. (KU)</p>
+                <p className="text-xs lg:text-sm text-gray-300">Research & Technology Advisor</p>
               </div>
 
               {/* Dr. Manoj Sharma */}
-              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
-                <h4 className="text-lg lg:text-xl font-bold text-white mb-2">Dr. Manoj Sharma</h4>
-                <p className="text-sm lg:text-base text-yellow-400 font-semibold mb-3">Ph.D. in Computer Science | Professor</p>
-                <p className="text-sm lg:text-base text-gray-300">Academic & Research Advisor</p>
+              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-4 rounded-xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
+                <h4 className="text-base lg:text-lg font-bold text-white mb-1.5">Dr. Manoj Sharma</h4>
+                <p className="text-xs lg:text-sm text-yellow-400 font-semibold mb-2">Ph.D. in Computer Science | Professor</p>
+                <p className="text-xs lg:text-sm text-gray-300">Academic & Research Advisor</p>
               </div>
 
               {/* Dr. Vivek Kumar */}
-              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
-                <h4 className="text-lg lg:text-xl font-bold text-white mb-2">Dr. Vivek Kumar</h4>
-                <p className="text-sm lg:text-base text-yellow-400 font-semibold mb-3">Ph.D. in High-Performance Computing (APJTU)</p>
-                <p className="text-sm lg:text-base text-gray-300">Systems & Infrastructure Advisor</p>
+              <div className="bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md p-4 rounded-xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-yellow-400/20 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
+                <h4 className="text-base lg:text-lg font-bold text-white mb-1.5">Dr. Vivek Kumar</h4>
+                <p className="text-xs lg:text-sm text-yellow-400 font-semibold mb-2">Ph.D. in High-Performance Computing (APJTU)</p>
+                <p className="text-xs lg:text-sm text-gray-300">Systems & Infrastructure Advisor</p>
               </div>
             </div>
           </div>

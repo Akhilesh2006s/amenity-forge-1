@@ -87,7 +87,7 @@ const Testimonials = () => {
         </div>
 
         {/* Special Testimonials - Featured */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-8 lg:mb-10 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-8 lg:mb-10 max-w-7xl ml-auto mr-0 md:mr-0 lg:mr-0">
           {/* Vineeth Jain - Most Special */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -170,7 +170,7 @@ const Testimonials = () => {
         </div>
 
         {/* Regular Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 max-w-7xl ml-auto mr-0 md:mr-0 lg:mr-0">
           {regularTestimonials.map((testimonial, index) => (
             <motion.div
               key={index}

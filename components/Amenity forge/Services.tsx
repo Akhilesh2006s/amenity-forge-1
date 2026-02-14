@@ -44,8 +44,8 @@ const services = [
     description: "Build secure and transparent decentralized apps with blockchain integration and smart contracts.",
   },
   {
-    title: "PowerPoint / Pitch deck",
-    description: "Stunning presentations and pitch decks that communicate your ideas with clarity and impact.",
+    title: "Strategic Presentations",
+    description: "We design high-impact presentations that help organizations secure funding, win contracts, and drive business growth.",
   },
   {
     title: "Data Analytics",

@@ -228,13 +228,13 @@ const Contact = () => {
                     <p className="text-white font-semibold text-sm sm:text-base group-hover:text-yellow-400 transition-colors duration-300">+91 8341122405</p>
                   </div>
                 </div>
-                <a href="https://mail.google.com/mail/?view=cm&to=amenityforge@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
+                <a href="https://mail.google.com/mail/?view=cm&to=founder@amenityforge.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
                   <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-2.5 rounded-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-yellow-400/30 flex-shrink-0">
                     <Mail className="w-4 h-4 lg:w-5 lg:h-5 text-black" />
                   </div>
                   <div>
                     <p className="text-gray-300 text-xs mb-0.5">Email</p>
-                    <p className="text-white font-semibold text-sm sm:text-base group-hover:text-yellow-400 transition-colors duration-300 break-words">amenityforge@gmail.com</p>
+                    <p className="text-white font-semibold text-sm sm:text-base group-hover:text-yellow-400 transition-colors duration-300 break-words">founder@amenityforge.com</p>
                   </div>
                 </a>
                 <div className="flex items-center space-x-3 group hover:translate-x-2 transition-transform duration-300">
