@@ -14,12 +14,14 @@ export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState<'jobs' | 'applications'>('jobs');
   const [showJobForm, setShowJobForm] = useState(false);
   const [editingJob, setEditingJob] = useState<Job | null>(null);
+  const [error, setError] = useState<string>('');
 
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
+    setError('');
     try {
       const [jobsRes, appsRes] = await Promise.all([
         fetch('/api/jobs'),
@@ -29,14 +31,33 @@ export default function AdminDashboard() {
       if (jobsRes.ok) {
         const jobsData = await jobsRes.json();
         setJobs(jobsData.jobs || []);
+        if (!jobsData.success && jobsData.message) {
+          setError(jobsData.message);
+        }
+      } else {
+        const errorData = await jobsRes.json().catch(() => ({}));
+        setError(errorData.message || 'Failed to load jobs');
+        setJobs([]);
       }
 
       if (appsRes.ok) {
         const appsData = await appsRes.json();
         setApplications(appsData.applications || []);
+        if (!appsData.success && appsData.message && !error) {
+          setError(appsData.message);
+        }
+      } else {
+        const errorData = await appsRes.json().catch(() => ({}));
+        if (!error) {
+          setError(errorData.message || 'Failed to load applications');
+        }
+        setApplications([]);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error fetching data:', error);
+      setError('Network error. Please check your connection and try again.');
+      setJobs([]);
+      setApplications([]);
     } finally {
       setIsLoading(false);
     }
@@ -165,6 +186,28 @@ export default function AdminDashboard() {
       </header>
 
       <div className="container mx-auto px-4 py-8">
+        {/* Error Message */}
+        {error && (
+          <div className="mb-6 p-4 bg-yellow-900/50 border border-yellow-700/50 rounded-lg text-yellow-300">
+            <div className="flex items-center justify-between">
+              <div>
+                <strong>Warning:</strong> {error}
+                {error.includes('MONGO_URI') && (
+                  <div className="mt-2 text-sm">
+                    Please add MONGO_URI to your Vercel environment variables: Settings → Environment Variables
+                  </div>
+                )}
+              </div>
+              <button
+                onClick={() => setError('')}
+                className="text-yellow-400 hover:text-yellow-200 text-xl font-bold ml-4"
+              >
+                ×
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Tabs */}
         <div className="flex space-x-4 mb-8 border-b border-gray-700">
           <button

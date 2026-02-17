@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
     const isAdmin = await isAuthenticated();
     if (!isAdmin) {
       return NextResponse.json(
-        { success: false, message: 'Unauthorized' },
+        { success: false, message: 'Unauthorized', applications: [] },
         { status: 401 }
       );
     }
@@ -32,10 +32,23 @@ export async function GET(request: NextRequest) {
       .toArray();
 
     return NextResponse.json({ success: true, applications }, { status: 200 });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error fetching applications:', error);
+    
+    // Check if it's a MongoDB connection error
+    if (error?.message?.includes('Mongo URI') || error?.message?.includes('environment variables')) {
+      return NextResponse.json(
+        { 
+          success: false, 
+          message: 'Database connection not configured. Please add MONGO_URI to environment variables.',
+          applications: [] 
+        },
+        { status: 503 }
+      );
+    }
+    
     return NextResponse.json(
-      { success: false, message: 'Failed to fetch applications' },
+      { success: false, message: 'Failed to fetch applications', applications: [] },
       { status: 500 }
     );
   }

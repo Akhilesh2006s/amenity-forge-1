@@ -23,10 +23,23 @@ export async function GET(request: NextRequest) {
       .toArray();
 
     return NextResponse.json({ success: true, jobs }, { status: 200 });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error fetching jobs:', error);
+    
+    // Check if it's a MongoDB connection error
+    if (error?.message?.includes('Mongo URI') || error?.message?.includes('environment variables')) {
+      return NextResponse.json(
+        { 
+          success: false, 
+          message: 'Database connection not configured. Please add MONGO_URI to environment variables.',
+          jobs: [] 
+        },
+        { status: 503 }
+      );
+    }
+    
     return NextResponse.json(
-      { success: false, message: 'Failed to fetch jobs' },
+      { success: false, message: 'Failed to fetch jobs', jobs: [] },
       { status: 500 }
     );
   }
