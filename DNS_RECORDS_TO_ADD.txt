@@ -1,0 +1,102 @@
+================================================================================
+EXACT DNS RECORDS TO ADD FOR SUBDOMAIN
+================================================================================
+
+Go to your domain registrar (where you bought amenityforge.com):
+- GoDaddy: https://dcc.godaddy.com → My Products → DNS
+- Namecheap: https://ap.www.namecheap.com → Domain List → Manage → Advanced DNS
+- Cloudflare: Dashboard → Select domain → DNS → Records
+- Google Domains: DNS → Custom records
+
+================================================================================
+IF USING VERCEL (Most Common for Next.js)
+================================================================================
+
+Record Type: CNAME
+Name/Host: jobs
+Value/Points to: cname.vercel-dns.com
+TTL: 3600 (or Auto)
+
+Then in Vercel Dashboard:
+1. Go to your project → Settings → Domains
+2. Add: jobs.amenityforge.com
+3. Wait for verification (usually instant)
+
+================================================================================
+IF USING NETLIFY
+================================================================================
+
+Record Type: CNAME
+Name/Host: jobs
+Value/Points to: your-site-name.netlify.app
+TTL: 3600
+
+Then in Netlify Dashboard:
+1. Site settings → Domain management
+2. Add custom domain: jobs.amenityforge.com
+
+================================================================================
+IF USING CLOUDFLARE (With Proxy)
+================================================================================
+
+Record Type: CNAME
+Name: jobs
+Target: amenityforge.com (or your main domain)
+Proxy status: Proxied (orange cloud) ✅
+TTL: Auto
+
+================================================================================
+IF USING TRADITIONAL HOSTING (cPanel, Shared Hosting)
+================================================================================
+
+Record Type: A
+Name/Host: jobs
+Value/Points to: [Your server's IP address]
+TTL: 3600
+
+Then in cPanel:
+1. Subdomains → Create Subdomain
+2. Subdomain: jobs
+3. Document Root: /public_html (or your Next.js build folder)
+
+================================================================================
+EXAMPLE: For jobs.amenityforge.com
+================================================================================
+
+In your DNS panel, add this EXACT record:
+
+┌─────────────────────────────────────────────────────────────┐
+│ Type:  CNAME                                               │
+│ Name:  jobs                                                │
+│ Value: cname.vercel-dns.com  (if using Vercel)            │
+│ TTL:   3600                                                │
+└─────────────────────────────────────────────────────────────┘
+
+OR
+
+┌─────────────────────────────────────────────────────────────┐
+│ Type:  A                                                    │
+│ Name:  jobs                                                │
+│ Value: 76.76.21.21  (Vercel IP - check dashboard)        │
+│ TTL:   3600                                                │
+└─────────────────────────────────────────────────────────────┘
+
+================================================================================
+AFTER ADDING DNS RECORD
+================================================================================
+
+1. Save the DNS record
+2. Wait 5-60 minutes for propagation
+3. Check status: https://dnschecker.org
+4. Visit: https://jobs.amenityforge.com
+
+================================================================================
+VERIFICATION
+================================================================================
+
+Test DNS propagation:
+https://dnschecker.org/#CNAME/jobs.amenityforge.com
+
+Once DNS shows green checkmarks globally, your subdomain is ready!
+
+================================================================================
