@@ -1,4 +1,4 @@
-// app/brochure/page.tsx
+// app/page.tsx - Main homepage
 "use client"
 
 import Home from "@/components/Amenity forge/Home"
@@ -8,7 +8,6 @@ import Contact from "@/components/Amenity forge/Contact"
 import About from "@/components/Amenity forge/About"
 import Review from "@/components/Amenity forge/Testimonials"
 import Hero from "@/components/Amenity forge/Hero"
-
 import Footer from "@/components/Amenity forge/footer"
 
 export default function BrochurePage() {

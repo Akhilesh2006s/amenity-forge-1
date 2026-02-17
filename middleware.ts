@@ -10,17 +10,28 @@ export function middleware(request: NextRequest) {
   
   // Route admin subdomain to /admin pages
   if (subdomain === 'admin' && hostname.includes('amenityforge.com')) {
-    // If accessing root, go to login
+    // If accessing root, go to admin login
     if (url.pathname === '/') {
       url.pathname = '/admin/login'
       return NextResponse.rewrite(url)
     }
-    // Otherwise, rewrite to /admin/* routes
-    if (!url.pathname.startsWith('/admin')) {
-      url.pathname = `/admin${url.pathname}`
+    // If accessing /login, go to admin login
+    if (url.pathname === '/login') {
+      url.pathname = '/admin/login'
       return NextResponse.rewrite(url)
     }
-    return NextResponse.next()
+    // If accessing /dashboard, go to admin dashboard
+    if (url.pathname === '/dashboard') {
+      url.pathname = '/admin/dashboard'
+      return NextResponse.rewrite(url)
+    }
+    // If path already starts with /admin, just pass through
+    if (url.pathname.startsWith('/admin')) {
+      return NextResponse.next()
+    }
+    // Otherwise, rewrite to /admin/* routes
+    url.pathname = `/admin${url.pathname}`
+    return NextResponse.rewrite(url)
   }
   
   // Route jobs subdomain to /jobs pages
@@ -29,11 +40,11 @@ export function middleware(request: NextRequest) {
       url.pathname = '/jobs'
       return NextResponse.rewrite(url)
     }
-    if (!url.pathname.startsWith('/jobs')) {
-      url.pathname = `/jobs${url.pathname}`
-      return NextResponse.rewrite(url)
+    if (url.pathname.startsWith('/jobs')) {
+      return NextResponse.next()
     }
-    return NextResponse.next()
+    url.pathname = `/jobs${url.pathname}`
+    return NextResponse.rewrite(url)
   }
   
   return NextResponse.next()
