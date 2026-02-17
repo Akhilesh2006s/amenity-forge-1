@@ -19,12 +19,13 @@ export default function JobsPage() {
   const fetchJobs = async () => {
     try {
       const response = await fetch('/api/jobs?active=true');
-      if (response.ok) {
-        const data = await response.json();
-        setJobs(data.jobs || []);
-      }
+      const data = await response.json();
+      // Always set jobs, even if there's an error (will be empty array)
+      setJobs(data.jobs || []);
     } catch (error) {
       console.error('Error fetching jobs:', error);
+      // Set empty array on error so page shows "No Open Positions"
+      setJobs([]);
     } finally {
       setIsLoading(false);
     }

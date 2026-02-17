@@ -27,20 +27,28 @@ export async function GET(request: NextRequest) {
     console.error('Error fetching jobs:', error);
     
     // Check if it's a MongoDB connection error
-    if (error?.message?.includes('Mongo URI') || error?.message?.includes('environment variables')) {
+    const errorMessage = error?.message || String(error);
+    if (
+      errorMessage.includes('Mongo URI') || 
+      errorMessage.includes('environment variables') ||
+      errorMessage.includes('MONGO_URI') ||
+      errorMessage.includes('connection') ||
+      !process.env.MONGO_URI
+    ) {
       return NextResponse.json(
         { 
           success: false, 
-          message: 'Database connection not configured. Please add MONGO_URI to environment variables.',
+          message: 'Database connection not configured. Please add MONGO_URI to environment variables in Vercel.',
           jobs: [] 
         },
         { status: 503 }
       );
     }
     
+    // Return empty jobs array instead of error for public access
     return NextResponse.json(
       { success: false, message: 'Failed to fetch jobs', jobs: [] },
-      { status: 500 }
+      { status: 200 } // Return 200 with empty array so page doesn't break
     );
   }
 }
