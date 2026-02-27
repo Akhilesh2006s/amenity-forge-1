@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import PageLoader from "@/components/Amenity forge/PageLoader"
 
-const SPLASH_TEXT = "A Vallunex Gloval Pvt Ltd Initiative"
+const SPLASH_TEXT = "A Vallunex Global Pvt Ltd Initiative"
 
 export default function RootClientShell({
   children,
