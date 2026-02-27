@@ -4,6 +4,8 @@ import { Application } from '@/lib/models';
 import { isAuthenticated } from '@/lib/auth';
 import { writeFile } from 'fs/promises';
 import { join } from 'path';
+import { google } from 'googleapis';
+import { Readable } from 'stream';
 
 // GET - Fetch all applications (admin only)
 export async function GET(request: NextRequest) {
@@ -92,30 +94,94 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Save file to public/uploads directory
-    // Note: For production (Vercel), consider using cloud storage (S3, Cloudinary, etc.)
+    // Convert uploaded file to Buffer
     const bytes = await resume.arrayBuffer();
     const buffer = Buffer.from(bytes);
     
-    const fileExtension = resume.name.split('.').pop();
-    const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExtension}`;
-    
     let resumeUrl: string;
-    try {
-      // Try to save to file system (works in development)
-      const fs = require('fs');
-      const uploadsDir = join(process.cwd(), 'public', 'uploads');
-      if (!fs.existsSync(uploadsDir)) {
-        fs.mkdirSync(uploadsDir, { recursive: true });
+
+    // Prefer Google Drive if credentials are configured
+    const driveEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
+    const driveKey = process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY;
+    const driveFolderId = process.env.GOOGLE_DRIVE_FOLDER_ID;
+
+    if (driveEmail && driveKey && driveFolderId) {
+      try {
+        const auth = new google.auth.JWT(
+          driveEmail,
+          undefined,
+          driveKey.replace(/\\n/g, '\n'),
+          ['https://www.googleapis.com/auth/drive.file']
+        );
+
+        const drive = google.drive({ version: 'v3', auth });
+
+        const fileMetadata = {
+          name: resume.name,
+          parents: [driveFolderId],
+        };
+
+        const media = {
+          mimeType: resume.type,
+          body: Readable.from(buffer),
+        };
+
+        const driveResponse = await drive.files.create({
+          requestBody: fileMetadata,
+          media,
+          fields: 'id, webViewLink',
+        });
+
+        const fileId = driveResponse.data.id;
+        const webViewLink = driveResponse.data.webViewLink;
+
+        resumeUrl =
+          webViewLink ||
+          (fileId
+            ? `https://drive.google.com/file/d/${fileId}/view?usp=drivesdk`
+            : '');
+      } catch (driveError) {
+        console.error('Error uploading resume to Google Drive:', driveError);
+        // Fallback to local file system if Drive upload fails
+        const fileExtension = resume.name.split('.').pop();
+        const fileName = `${Date.now()}-${Math.random()
+          .toString(36)
+          .substring(7)}.${fileExtension}`;
+
+        try {
+          const fs = require('fs');
+          const uploadsDir = join(process.cwd(), 'public', 'uploads');
+          if (!fs.existsSync(uploadsDir)) {
+            fs.mkdirSync(uploadsDir, { recursive: true });
+          }
+          const uploadPath = join(uploadsDir, fileName);
+          await writeFile(uploadPath, buffer);
+          resumeUrl = `/uploads/${fileName}`;
+        } catch (fileError) {
+          const base64Data = buffer.toString('base64');
+          resumeUrl = `data:${resume.type};base64,${base64Data}`;
+        }
       }
-      const uploadPath = join(uploadsDir, fileName);
-      await writeFile(uploadPath, buffer);
-      resumeUrl = `/uploads/${fileName}`;
-    } catch (fileError) {
-      // If file system write fails (e.g., on Vercel), store as base64 in DB
-      // In production, you should use cloud storage instead
-      const base64Data = buffer.toString('base64');
-      resumeUrl = `data:${resume.type};base64,${base64Data}`;
+    } else {
+      // No Drive credentials: use local file system or base64 fallback
+      const fileExtension = resume.name.split('.').pop();
+      const fileName = `${Date.now()}-${Math.random()
+        .toString(36)
+        .substring(7)}.${fileExtension}`;
+
+      try {
+        const fs = require('fs');
+        const uploadsDir = join(process.cwd(), 'public', 'uploads');
+        if (!fs.existsSync(uploadsDir)) {
+          fs.mkdirSync(uploadsDir, { recursive: true });
+        }
+        const uploadPath = join(uploadsDir, fileName);
+        await writeFile(uploadPath, buffer);
+        resumeUrl = `/uploads/${fileName}`;
+      } catch (fileError) {
+        const base64Data = buffer.toString('base64');
+        resumeUrl = `data:${resume.type};base64,${base64Data}`;
+      }
     }
 
     const db = await getDb();

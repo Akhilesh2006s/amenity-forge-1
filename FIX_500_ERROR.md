@@ -56,9 +56,13 @@ Once `MONGO_URI` is added and you redeploy:
 ## Quick Checklist
 
 - [ ] Added `MONGO_URI` in Vercel → Settings → Environment Variables
+- [ ] Added `GOOGLE_SERVICE_ACCOUNT_EMAIL` (for Drive uploads)
+- [ ] Added `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY` (from service account JSON, with real newlines)
+- [ ] Added `GOOGLE_DRIVE_FOLDER_ID` = `1YL9cZO_T8izQSAcJ5bPMhClui85r7Nuu`
 - [ ] Selected all environments (Production, Preview, Development)
 - [ ] Redeployed the project
 - [ ] Verified `jobs.amenityforge.com` loads without 500 errors
+- [ ] Verified resume links open Google Drive files
 - [ ] Tested `admin.amenityforge.com` login works
 
 ## Still Seeing 500?

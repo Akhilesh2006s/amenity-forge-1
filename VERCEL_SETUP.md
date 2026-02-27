@@ -51,6 +51,9 @@ vercel --prod
 Make sure these are set in Vercel:
 
 - ✅ `MONGO_URI` - MongoDB connection string (REQUIRED)
+- ⚠️ `GOOGLE_SERVICE_ACCOUNT_EMAIL` - Google service account email (for resume uploads to Drive)
+- ⚠️ `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY` - Google service account private key (use multiline, replace `\n` with actual newlines)
+- ⚠️ `GOOGLE_DRIVE_FOLDER_ID` - Google Drive folder ID (e.g. `1YL9cZO_T8izQSAcJ5bPMhClui85r7Nuu`)
 - ⚠️ `WEB3FORMS_ACCESS_KEY` - For contact form (optional)
 - ⚠️ `WEB3FORMS_SALES_ACCESS_KEY` - For sales registration form (optional)
 
