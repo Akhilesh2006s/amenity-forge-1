@@ -12,6 +12,14 @@ body {
   }
 }
 
+/* LaserFlow background container */
+.laser-flow-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  pointer-events: none;
+}
+
 @layer base {
   :root {
     --background: 0 0% 0%;

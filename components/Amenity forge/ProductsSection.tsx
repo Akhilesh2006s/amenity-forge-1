@@ -36,16 +36,10 @@ const ProductsSection = () => {
       
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-4 sm:mb-5 lg:mb-6 animate-fade-in-up">
-          <div className="flex items-center justify-center mb-2 sm:mb-3">
-            <div className="relative">
-              <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 mr-1.5 animate-pulse" />
-              <div className="absolute inset-0 h-4 w-4 sm:h-5 sm:w-5 text-yellow-400/50 blur-sm animate-pulse"></div>
-            </div>
-            <span className="text-xs sm:text-sm font-medium bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent tracking-wider uppercase bg-[length:200%_auto] animate-gradient-shift">Our Products</span>
-            <div className="relative ml-1.5">
-              <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 animate-pulse" />
-              <div className="absolute inset-0 h-4 w-4 sm:h-5 sm:w-5 text-yellow-400/50 blur-sm animate-pulse"></div>
-            </div>
+          <div className="mb-2 sm:mb-3">
+            <span className="text-xs sm:text-sm font-medium bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent tracking-wider uppercase bg-[length:200%_auto] animate-gradient-shift">
+              Our Products
+            </span>
           </div>
           
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent leading-tight bg-[length:200%_auto] animate-gradient-shift animate-fade-in-up" style={{animationDelay: '0.2s'}}>
@@ -66,7 +60,6 @@ const ProductsSection = () => {
               description={product.description}
               icon={product.icon}
               delay={index * 200}
-              isHighlighted={index === 3}
             />
           ))}
         </div>

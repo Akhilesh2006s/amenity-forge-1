@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Code, Smartphone, Cloud, Clock, CheckCircle, Sparkles } from 'lucide-react';
+import LaserFlow from '@/components/Amenity forge/LaserFlow';
 
 const Home = () => {
   const services = [
@@ -28,6 +29,27 @@ const Home = () => {
 
   return (
     <section id="home" className="min-h-screen bg-black pt-16 sm:pt-16 pb-0 sm:pb-0 relative overflow-hidden">
+      {/* LaserFlow background */}
+      <div className="absolute inset-0">
+        <LaserFlow
+          horizontalBeamOffset={0.12}
+          verticalBeamOffset={0.0}
+          color="#FF79C6"
+          horizontalSizing={0.65}
+          verticalSizing={2.2}
+          wispDensity={1.1}
+          wispSpeed={14}
+          wispIntensity={4.5}
+          flowSpeed={0.32}
+          flowStrength={0.22}
+          fogIntensity={0.5}
+          fogScale={0.35}
+          fogFallSpeed={0.55}
+          decay={1.05}
+          falloffStart={1.2}
+        />
+      </div>
+
       {/* 3D Background Objects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Floating cubes */}
