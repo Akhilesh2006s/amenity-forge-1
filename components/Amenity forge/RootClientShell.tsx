@@ -10,10 +10,21 @@ export default function RootClientShell({
 }: {
   children: React.ReactNode
 }) {
-  const [showSplash, setShowSplash] = useState(true)
+  const [showSplash, setShowSplash] = useState(false)
   const [visibleChars, setVisibleChars] = useState(0)
 
   useEffect(() => {
+    // Don't show loader/splash on admin or jobs subdomains
+    if (typeof window !== "undefined") {
+      const host = window.location.host || ""
+      if (host.startsWith("admin.") || host.startsWith("jobs.")) {
+        setShowSplash(false)
+        return
+      }
+    }
+
+    setShowSplash(true)
+
     let i = 0
     const interval = setInterval(() => {
       i += 1
