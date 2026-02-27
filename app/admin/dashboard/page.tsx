@@ -77,13 +77,17 @@ export default function AdminDashboard() {
         method: 'DELETE',
       });
 
-      const data = await response.json();
+      let data: any = null;
+      const contentType = response.headers.get('content-type') || '';
+      if (contentType.includes('application/json')) {
+        data = await response.json();
+      }
 
-      if (response.ok && data.success) {
+      if (response.ok && (!data || data.success !== false)) {
         // Refresh the data to get updated list
         fetchData();
       } else {
-        alert(data.message || 'Failed to delete job');
+        alert(data?.message || 'Failed to delete job');
       }
     } catch (error) {
       console.error('Error deleting job:', error);
@@ -131,13 +135,17 @@ export default function AdminDashboard() {
         method: 'DELETE',
       });
 
-      const data = await response.json();
+      let data: any = null;
+      const contentType = response.headers.get('content-type') || '';
+      if (contentType.includes('application/json')) {
+        data = await response.json();
+      }
 
-      if (response.ok && data.success) {
+      if (response.ok && (!data || data.success !== false)) {
         // Refresh the data to get updated list
         fetchData();
       } else {
-        alert(data.message || 'Failed to delete application');
+        alert(data?.message || 'Failed to delete application');
       }
     } catch (error) {
       console.error('Error deleting application:', error);
