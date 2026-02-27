@@ -106,3 +106,109 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+
+// PUT - Update a job (admin only, by id query param)
+export async function PUT(request: NextRequest) {
+  try {
+    const isAdmin = await isAuthenticated();
+    if (!isAdmin) {
+      return NextResponse.json(
+        { success: false, message: 'Unauthorized' },
+        { status: 401 }
+      );
+    }
+
+    const searchParams = request.nextUrl.searchParams;
+    const id = searchParams.get('id');
+
+    if (!id) {
+      return NextResponse.json(
+        { success: false, message: 'Job id is required' },
+        { status: 400 }
+      );
+    }
+
+    const body = await request.json();
+    const db = await getDb();
+
+    const updateData: Partial<Job> = {
+      ...body,
+      updatedAt: new Date(),
+    };
+
+    if ((body as any).deadline) {
+      updateData.deadline = new Date((body as any).deadline);
+    }
+
+    const { ObjectId } = await import('mongodb');
+    const result = await db
+      .collection<Job>(COLLECTIONS.JOBS)
+      .findOneAndUpdate(
+        { _id: new ObjectId(id) },
+        { $set: updateData },
+        { returnDocument: 'after' }
+      );
+
+    if (!result) {
+      return NextResponse.json(
+        { success: false, message: 'Job not found' },
+        { status: 404 }
+      );
+    }
+
+    return NextResponse.json({ success: true, job: result }, { status: 200 });
+  } catch (error) {
+    console.error('Error updating job:', error);
+    return NextResponse.json(
+      { success: false, message: 'Failed to update job' },
+      { status: 500 }
+    );
+  }
+}
+
+// DELETE - Delete a job (admin only, by id query param)
+export async function DELETE(request: NextRequest) {
+  try {
+    const isAdmin = await isAuthenticated();
+    if (!isAdmin) {
+      return NextResponse.json(
+        { success: false, message: 'Unauthorized' },
+        { status: 401 }
+      );
+    }
+
+    const searchParams = request.nextUrl.searchParams;
+    const id = searchParams.get('id');
+
+    if (!id) {
+      return NextResponse.json(
+        { success: false, message: 'Job id is required' },
+        { status: 400 }
+      );
+    }
+
+    const db = await getDb();
+    const { ObjectId } = await import('mongodb');
+    const result = await db
+      .collection<Job>(COLLECTIONS.JOBS)
+      .deleteOne({ _id: new ObjectId(id) });
+
+    if (result.deletedCount === 0) {
+      return NextResponse.json(
+        { success: false, message: 'Job not found' },
+        { status: 404 }
+      );
+    }
+
+    return NextResponse.json(
+      { success: true, message: 'Job deleted' },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error('Error deleting job:', error);
+    return NextResponse.json(
+      { success: false, message: 'Failed to delete job' },
+      { status: 500 }
+    );
+  }
+}

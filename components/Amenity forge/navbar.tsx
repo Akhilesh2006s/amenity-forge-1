@@ -14,6 +14,8 @@ export default function Navbar() {
     { name: "RNXA", href: "/RNXA" },
     { name: "About", href: "/About" },
     { name: "GTAP", href: "/GTP" },
+    // External jobs portal subdomain
+    { name: "Jobs Portal", href: "https://jobs.amenityforge.com" },
   ]
 
   return (

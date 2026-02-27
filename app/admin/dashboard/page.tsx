@@ -73,7 +73,7 @@ export default function AdminDashboard() {
     if (!confirm('Are you sure you want to delete this job? This action cannot be undone.')) return;
 
     try {
-      const response = await fetch(`/api/jobs/${id}`, {
+      const response = await fetch(`/api/jobs?id=${id}`, {
         method: 'DELETE',
       });
 
@@ -97,7 +97,7 @@ export default function AdminDashboard() {
 
   const handleToggleJobStatus = async (job: Job) => {
     try {
-      const response = await fetch(`/api/jobs/${job._id}`, {
+      const response = await fetch(`/api/jobs?id=${job._id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...job, isActive: !job.isActive }),
@@ -113,7 +113,7 @@ export default function AdminDashboard() {
 
   const handleUpdateApplicationStatus = async (id: string, status: string) => {
     try {
-      const response = await fetch(`/api/applications/${id}`, {
+      const response = await fetch(`/api/applications?id=${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status }),
@@ -131,7 +131,7 @@ export default function AdminDashboard() {
     if (!confirm('Are you sure you want to delete this application? This action cannot be undone.')) return;
 
     try {
-      const response = await fetch(`/api/applications/${id}`, {
+      const response = await fetch(`/api/applications?id=${id}`, {
         method: 'DELETE',
       });
 
@@ -440,7 +440,7 @@ function JobForm({ job, onClose, onSuccess }: { job: Job | null; onClose: () => 
     setIsSubmitting(true);
 
     try {
-      const url = job?._id ? `/api/jobs/${job._id}` : '/api/jobs';
+      const url = job?._id ? `/api/jobs?id=${job._id}` : '/api/jobs';
       const method = job?._id ? 'PUT' : 'POST';
 
       const response = await fetch(url, {
