@@ -47,15 +47,17 @@ export default function JobsPage() {
   return (
     <div className="min-h-screen bg-black">
       {/* Header */}
-      <header className="bg-gradient-to-br from-gray-900/90 to-black border-b border-gray-700/50 backdrop-blur-md">
-        <div className="container mx-auto px-4 py-12">
+      <header
+        className="relative border-b border-gray-700/50 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/2.png')" }}
+      >
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="container relative z-10 mx-auto px-4 py-16 md:py-20">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent">
-                Career Opportunities
-              </span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              Career Opportunities
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-200 text-lg max-w-2xl mx-auto">
               Join the Amenity Forge team and help us build the future of digital solutions
             </p>
           </div>

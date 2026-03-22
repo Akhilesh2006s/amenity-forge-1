@@ -1,18 +1,28 @@
 import React from 'react';
-import { ArrowRight, Code, Smartphone, Cloud, Clock, CheckCircle, Sparkles } from 'lucide-react';
+import { ArrowRight, Code, Smartphone, Cloud, Clock, CheckCircle, Sparkles, GraduationCap } from 'lucide-react';
 import LaserFlow from '@/components/Amenity forge/LaserFlow';
 
 const Home = () => {
   const services = [
     {
-      icon: <Code className="w-5 h-5" />,
-      title: "Custom Software Development",
-      description: "Tailored solutions for unique business needs"
+      icon: <GraduationCap className="w-5 h-5" />,
+      title: "AmenXE - The X Factor in Education Amenities", 
+      description: "AI Enabled School Empowering Students with Intelligent Learning"
+    },
+    {
+      icon: <Sparkles className="w-5 h-5" />,
+      title: "AmenXC - Where CRM Meets the X factor in Growth", 
+      description: "AI Native to streamline operations, elevate relationships and accelerate growth"
     },
     {
       icon: <Smartphone className="w-5 h-5" />,
       title: "Mobile App Development", 
       description: "iOS, Android & cross-platform solutions"
+    },
+    {
+      icon: <Code className="w-5 h-5" />,
+      title: "Custom Software Development",
+      description: "Tailored solutions for unique business needs"
     },
     {
       icon: <Cloud className="w-5 h-5" />,
@@ -23,8 +33,8 @@ const Home = () => {
 
   const benefits = [
     "Quick turnaround times with quality delivery",
-    "Proven track record of successful projects", 
-    "Expert guidance throughout your project"
+    "Proven track record of successful clients", 
+    "Expert guidance throughout your journey"
   ];
 
   return (
@@ -76,18 +86,15 @@ const Home = () => {
           <div className="space-y-3 sm:space-y-4">
             <div className="space-y-2 sm:space-y-3">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-bold leading-tight">
-                <span className="text-white block mb-1 sm:mb-1.5">Turn Your Vision</span>
+                  <span className="text-white block">One Platform</span>
+                  <span className="text-white block mb-1 sm:mb-1.5">Every Organisation</span>
                 <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent block">
-                  Into Digital Reality
+                  Endless Possibilities
                 </span>
               </h1>
               
               <p className="text-base sm:text-lg lg:text-lg text-gray-300 leading-relaxed max-w-2xl">
-                Your strategic digital partner providing comprehensive solutions from software development to digital marketing.
-              </p>
-              
-              <p className="text-sm sm:text-base lg:text-base font-semibold text-yellow-400">
-                You Tell, We Implement.
+                Redefining life through intelligent, unified solutions a strategic platform designed to power learning, accelerate growth, and unlock student success.
               </p>
             </div>
 
@@ -116,9 +123,9 @@ const Home = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
-              <a href="/Services" className="w-full sm:w-auto">
+              <a href="/Products" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 sm:px-8 py-3.5 sm:py-3 rounded-full font-bold text-sm sm:text-base hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg shadow-yellow-400/30 min-h-[44px]">
-                  <span>Explore Services</span>
+                  <span>Explore Products</span>
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
               </a>

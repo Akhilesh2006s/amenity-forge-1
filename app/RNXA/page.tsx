@@ -7,7 +7,7 @@ import { ExternalLink } from "lucide-react";
 
 export default function RNXAPage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black font-sans">
       <Navbar />
       <section className="pt-16 sm:pt-20 lg:pt-24 pb-0 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +16,7 @@ export default function RNXAPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4"
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4"
             >
               <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
                 RNXA
@@ -26,7 +26,7 @@ export default function RNXAPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-gray-300 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto mb-2"
+              className="text-gray-300 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto mb-2 text-center"
             >
               Internationally operating as RNXA Digital
             </motion.p>
@@ -34,7 +34,7 @@ export default function RNXAPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-white text-lg sm:text-xl lg:text-2xl font-semibold max-w-3xl mx-auto mb-2"
+              className="text-white text-lg sm:text-xl lg:text-2xl font-bold tracking-tight max-w-3xl mx-auto mb-2 text-center"
             >
               Reimagining CRM with Agentic AI.
             </motion.p>
@@ -42,7 +42,7 @@ export default function RNXAPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.35 }}
-              className="text-gray-300 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto mb-4"
+              className="text-gray-300 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto mb-4 text-center"
             >
               Driving Growth, Experience and Speed on ServiceNow
             </motion.p>
@@ -71,7 +71,7 @@ export default function RNXAPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-center"
+              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mb-6 text-center"
             >
               <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
                 Committed to Excellence
@@ -84,7 +84,7 @@ export default function RNXAPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-6 text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed"
+              className="space-y-6 text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed text-left max-w-3xl mx-auto"
             >
               <p>
                 RNXA Digital was founded to close the gap between strategy and execution in enterprise CRM and AI. Built by leaders with decades of experience delivering and operating mission-critical systems, we help organizations move beyond pilots into production-ready, outcome-driven solutions. Our vision is to make Agentic AI practical, reliable, and valuable in real business environments.

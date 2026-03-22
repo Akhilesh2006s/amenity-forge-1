@@ -1,33 +1,6 @@
 "use client"
 
-import ProductCard from "./ProductCard";
-import { Cpu, GraduationCap, Award, Sparkles, Zap, Users } from "lucide-react";
-import { motion } from "framer-motion";
-
 const ProductsSection = () => {
-  const products = [
-    {
-      title: "Amenop AI Powered Business Operations",
-      description: "Say goodbye to traditional software! With Amenop, turn your business operations into a cakewalk. Automate, optimize, and grow effortlessly using AI.",
-      icon: Cpu
-    },
-    {
-      title: "Amen-XE AI Driven Operating System for Schools",
-      description: "Reimagine school management. Amen-XE replaces conventional ERPs with an AI-powered operating system designed to enhance efficiency, learning, and administration. It's not a traditional ERP—it's the future of school operations.",
-      icon: GraduationCap
-    },
-    {
-      title: "GTP Certification & Technical Partner for Education",
-      description: "GTP partners with schools and colleges to deliver certifications and technical education solutions, empowering students and institutions to achieve excellence.",
-      icon: Award
-    },
-    {
-      title: "Amen-XC AI Driven CRM Platform",
-      description: "Transform customer engagement with Amen-XC, an AI-powered CRM designed to automate sales, support, and customer lifecycle management. From intelligent lead tracking to predictive insights, Amen-XC helps businesses build stronger relationships and scale faster.",
-      icon: Users
-    }
-  ];
-
   return (
     <section className="py-4 sm:py-6 lg:py-8 px-4 sm:px-5 bg-black relative overflow-hidden pt-16 sm:pt-20 lg:pt-24">
       {/* Pure black background - no decorative elements */}
@@ -52,17 +25,6 @@ const ProductsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-5 max-w-7xl mx-auto">
-          {products.map((product, index) => (
-            <ProductCard
-              key={index}
-              title={product.title}
-              description={product.description}
-              icon={product.icon}
-              delay={index * 200}
-            />
-          ))}
-        </div>
       </div>
 
       {/* Delivered with Impact Section */}
