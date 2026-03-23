@@ -28,7 +28,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       className="group relative animate-fade-in-up"
       style={{animationDelay: `${delay / 1000}s`}}
     >
-      <div className={`relative overflow-hidden rounded-xl backdrop-blur-md border p-5 h-full transition-all duration-500 transform hover:scale-105 hover:shadow-2xl ${
+      <div className={`relative overflow-hidden rounded-xl backdrop-blur-md border p-4 h-full transition-all duration-500 transform hover:scale-[1.02] hover:shadow-xl ${
         isHighlighted 
           ? 'bg-gradient-to-r from-gray-700/95 via-gray-600/95 to-gray-700/95 border-yellow-400/70 shadow-xl shadow-yellow-400/20' 
           : 'bg-gradient-to-r from-gray-800/90 via-gray-700/90 to-gray-800/90 border-gray-600/50 hover:border-yellow-400/70 hover:shadow-yellow-400/20'
@@ -37,20 +37,20 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
         
         {/* Icon */}
-        <div className="relative z-10 mb-4">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r from-yellow-400 to-orange-500 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-yellow-400/30">
-            <Icon className="h-6 w-6 text-black" />
+        <div className="relative z-10 mb-3">
+          <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-r from-yellow-400 to-orange-500 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-yellow-400/30">
+            <Icon className="h-5 w-5 text-black" />
           </div>
         </div>
         
         {/* Content */}
         <div className="relative z-10">
-          <h3 className={`text-lg font-bold mb-2.5 group-hover:text-yellow-400 transition-colors duration-300 leading-tight ${
+          <h3 className={`text-base sm:text-lg font-bold mb-2 group-hover:text-yellow-400 transition-colors duration-300 leading-tight ${
             isHighlighted ? 'text-yellow-400' : 'text-white'
           }`}>
             {title}
           </h3>
-          <p className="text-sm text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+          <p className="text-sm text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300 line-clamp-4">
             {description}
           </p>
         </div>

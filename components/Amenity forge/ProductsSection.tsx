@@ -1,18 +1,68 @@
 "use client"
 
+import ProductCard from "./ProductCard";
+import { Cpu, GraduationCap, Award, Users } from "lucide-react";
+
 const ProductsSection = () => {
+  const products = [
+    {
+      title: "Amenop AI Powered Business Operations",
+      description:
+        "Say goodbye to traditional software. With Amenop, automate, optimize, and scale business operations with AI.",
+      icon: Cpu,
+    },
+    {
+      title: "Amen-XE AI Driven Operating System for Schools",
+      description:
+        "A complete school ecosystem for academics, administration, communication, and smarter decisions powered by AI.",
+      icon: GraduationCap,
+    },
+    {
+      title: "GTP Certification & Technical Partner for Education",
+      description:
+        "Industry-aligned certification pathways, technical enablement, and strategic education partnerships for institutions.",
+      icon: Award,
+    },
+    {
+      title: "Amen-XC AI Driven CRM Platform",
+      description:
+        "AI-native CRM to streamline operations, improve relationships, automate workflows, and accelerate growth.",
+      icon: Users,
+    },
+  ];
+
   return (
-    <section className="min-h-screen bg-black relative overflow-hidden">
+    <section className="bg-black relative overflow-hidden pt-20 sm:pt-24 lg:pt-28 pb-6 sm:pb-8 lg:pb-10">
       {/* Pure black background - no decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
       </div>
       
-      <div className="relative z-10 min-h-screen">
-        <div
-          className="absolute inset-0 bg-center bg-cover bg-no-repeat bg-fixed"
-          style={{ backgroundImage: "url('/Products.png')", backgroundPosition: "center 40px", backgroundSize: "85% auto" }}
-          aria-label="Amenity Forge Products"
-        />
+      <div className="container mx-auto px-4 sm:px-5 lg:px-8 relative z-10 max-w-7xl">
+        <div className="grid gap-4 lg:grid-cols-5 items-stretch">
+          <div className="lg:col-span-2">
+            <div className="h-full min-h-[220px] sm:min-h-[300px] lg:min-h-[460px] rounded-xl overflow-hidden border border-gray-700/60 shadow-2xl shadow-black/50">
+              <img
+                src="/Products.png"
+                alt="Amenity Forge Products"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-span-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 h-full auto-rows-fr">
+              {products.map((product, index) => (
+                <ProductCard
+                  key={index}
+                  title={product.title}
+                  description={product.description}
+                  icon={product.icon}
+                  delay={index * 150}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Delivered with Impact Section */}
