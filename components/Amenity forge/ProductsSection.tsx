@@ -2,29 +2,17 @@
 
 const ProductsSection = () => {
   return (
-    <section className="py-4 sm:py-6 lg:py-8 px-4 sm:px-5 bg-black relative overflow-hidden pt-16 sm:pt-20 lg:pt-24">
+    <section className="min-h-screen bg-black relative overflow-hidden">
       {/* Pure black background - no decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
       </div>
       
-      <div className="container mx-auto relative z-10">
-        <div className="text-center mb-4 sm:mb-5 lg:mb-6 animate-fade-in-up">
-          <div className="mb-2 sm:mb-3">
-            <span className="text-xs sm:text-sm font-medium bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent tracking-wider uppercase bg-[length:200%_auto] animate-gradient-shift">
-              Our Products
-            </span>
-          </div>
-          
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent leading-tight bg-[length:200%_auto] animate-gradient-shift animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            Revolutionary Solutions
-          </h2>
-          <p className="text-xs sm:text-sm lg:text-base text-gray-300 max-w-3xl mx-auto leading-relaxed animate-fade-in-up pt-0.5 px-4" style={{animationDelay: '0.4s'}}>
-            Discover our suite of 
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent font-semibold"> AI-powered solutions </span>
-            designed to transform your operations and education systems.
-          </p>
-        </div>
-        
+      <div className="relative z-10 min-h-screen">
+        <div
+          className="absolute inset-0 bg-center bg-cover bg-no-repeat bg-fixed"
+          style={{ backgroundImage: "url('/Products.png')", backgroundPosition: "center 40px", backgroundSize: "85% auto" }}
+          aria-label="Amenity Forge Products"
+        />
       </div>
 
       {/* Delivered with Impact Section */}
