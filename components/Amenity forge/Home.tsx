@@ -6,12 +6,12 @@ const Home = () => {
   const services = [
     {
       icon: <GraduationCap className="w-5 h-5" />,
-      title: "AmenXE - The X Factor in Education Amenities", 
+      title: "XE - The X Factor in Modern Education", 
       description: "AI Enabled School Empowering Students with Intelligent Learning"
     },
     {
       icon: <Sparkles className="w-5 h-5" />,
-      title: "AmenXC - Where CRM Meets the X factor in Growth", 
+      title: "XC - More than a CRM. A growth engine", 
       description: "AI Native to streamline operations, elevate relationships and accelerate growth"
     },
     {
@@ -94,7 +94,7 @@ const Home = () => {
               </h1>
               
               <p className="text-base sm:text-lg lg:text-lg text-gray-300 leading-relaxed max-w-2xl">
-                Redefining life through intelligent, unified solutions a strategic platform designed to power learning, accelerate growth, and unlock student success.
+                A unified platform designed to elevate learning, accelerate growth, and unlock true student potential.
               </p>
             </div>
 

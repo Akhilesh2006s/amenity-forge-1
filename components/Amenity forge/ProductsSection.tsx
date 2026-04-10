@@ -1,121 +1,128 @@
 "use client"
 
-import ProductCard from "./ProductCard";
-import { Cpu, GraduationCap, Award, Users } from "lucide-react";
+import ProductCard from "./ProductCard"
+import { BrandButton } from "@/components/ui/brand-button"
+import { Cpu, GraduationCap, Award, Users } from "lucide-react"
 
-const ProductsSection = () => {
-  const products = [
-    {
-      title: "Amenop AI Powered Business Operations",
-      description:
-        "Say goodbye to traditional software. With Amenop, automate, optimize, and scale business operations with AI.",
-      icon: Cpu,
-    },
-    {
-      title: "Amen-XE AI Driven Operating System for Schools",
-      description:
-        "A complete school ecosystem for academics, administration, communication, and smarter decisions powered by AI.",
-      icon: GraduationCap,
-    },
-    {
-      title: "GTP Certification & Technical Partner for Education",
-      description:
-        "Industry-aligned certification pathways, technical enablement, and strategic education partnerships for institutions.",
-      icon: Award,
-    },
-    {
-      title: "Amen-XC AI Driven CRM Platform",
-      description:
-        "AI-native CRM to streamline operations, improve relationships, automate workflows, and accelerate growth.",
-      icon: Users,
-    },
-  ];
+const products = [
+  {
+    title: "XE - Operating System for Schools",
+    description:
+      "A unified school ecosystem for academics, administration, family communication, and AI-assisted decisions - one platform instead of fragmented tools.",
+    icon: GraduationCap,
+    featured: true,
+  },
+  {
+    title: "Amenop - AI Business Operations",
+    description:
+      "Automate workflows, optimize resources, and scale operations with AI-driven orchestration built for modern teams.",
+    icon: Cpu,
+  },
+  {
+    title: "GTP Certification & Education Partnerships",
+    description:
+      "Industry-aligned certifications, technical enablement, and strategic partnerships that help institutions adopt technology with confidence.",
+    icon: Award,
+  },
+  {
+    title: "XC AI-Native",
+    description:
+      "Pipeline clarity, relationship intelligence, and workflow automation so revenue teams move faster with less manual work.",
+    icon: Users,
+  },
+] as const
+
+function PartnerLogo({ index }: { index: number }) {
+  return (
+    <div
+      className={[
+        "group rounded-xl p-px",
+        "bg-white/10",
+        "transition-all duration-300 ease-out",
+        "hover:-translate-y-1",
+        "hover:bg-gradient-to-r hover:from-yellow-400 hover:via-orange-500 hover:to-yellow-400",
+        "hover:shadow-[0_0_20px_rgba(255,165,0,0.15)]",
+      ].join(" ")}
+    >
+      <div
+        className={[
+          "flex h-40 w-full min-h-0 items-center justify-center overflow-hidden rounded-[11px] bg-[#111827] p-6",
+        ].join(" ")}
+      >
+        <img
+          src={`/logo${index}.png`}
+          alt=""
+          className={[
+            "max-h-16 max-w-[120px] h-auto w-auto object-contain",
+            "opacity-80 transition-all duration-300 ease-out",
+            "group-hover:opacity-100 group-hover:scale-105",
+          ].join(" ")}
+          onError={(e) => {
+            ;(e.target as HTMLImageElement).style.display = "none"
+          }}
+        />
+      </div>
+    </div>
+  )
+}
+
+export default function ProductsSection() {
+  const [featured, ...rest] = products
 
   return (
-    <section className="bg-black relative overflow-hidden pt-20 sm:pt-24 lg:pt-28 pb-6 sm:pb-8 lg:pb-10">
-      {/* Pure black background - no decorative elements */}
-      <div className="absolute inset-0 pointer-events-none">
-      </div>
-      
-      <div className="container mx-auto px-4 sm:px-5 lg:px-8 relative z-10 max-w-7xl">
-        <div className="grid gap-4 lg:grid-cols-5 items-stretch">
-          <div className="lg:col-span-2">
-            <div className="h-full min-h-[220px] sm:min-h-[300px] lg:min-h-[460px] rounded-xl overflow-hidden border border-gray-700/60 shadow-2xl shadow-black/50">
-              <img
-                src="/Products.png"
-                alt="Amenity Forge Products"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="lg:col-span-3">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 h-full auto-rows-fr">
-              {products.map((product, index) => (
-                <ProductCard
-                  key={index}
-                  title={product.title}
-                  description={product.description}
-                  icon={product.icon}
-                  delay={index * 150}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+    <section className="w-full">
+      <div className="mb-10 md:mb-14">
+        <h2 className="text-2xl font-semibold text-white mb-2">Products</h2>
+        <p className="text-gray-400 max-w-2xl">
+          Modular platforms that work together - deploy what you need today and
+          expand as your organization grows.
+        </p>
       </div>
 
-      {/* Delivered with Impact Section */}
-      <div className="mt-6 lg:mt-8 pt-4 lg:pt-5 border-t border-gray-700/50">
-        <div className="container mx-auto px-4 lg:px-5">
-          <div className="text-center mb-4 lg:mb-5 animate-fade-in-up">
-            <h3 className="text-lg lg:text-xl font-bold mb-2">
-              <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift">
-                Delivered with Impact
-              </span>
-            </h3>
-          </div>
+      <div className="grid gap-6 lg:grid-cols-3">
+        <ProductCard
+          title={featured.title}
+          description={featured.description}
+          icon={featured.icon}
+          featured
+        />
+        {rest.map((product) => (
+          <ProductCard
+            key={product.title}
+            title={product.title}
+            description={product.description}
+            icon={product.icon}
+          />
+        ))}
+      </div>
 
-          {/* 12 Logo Boxes */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 gap-2 lg:gap-3 max-w-6xl mx-auto">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13].map((logoIndex, index) => {
-              return (
-                <div 
-                  key={logoIndex}
-                  className="group relative bg-gradient-to-br from-gray-800/90 via-gray-700/90 to-gray-800/90 backdrop-blur-md rounded-lg border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-black/50 hover:shadow-2xl hover:shadow-yellow-400/30 overflow-hidden animate-fade-in-up"
-                  style={{animationDelay: `${index * 0.05}s`}}
-                >
-                  {/* Premium shadow layers */}
-                  <div className="absolute inset-0 rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.6),0_4px_15px_rgba(0,0,0,0.4)] group-hover:shadow-[0_12px_40px_rgba(251,191,36,0.3),0_6px_20px_rgba(249,115,22,0.2)] transition-shadow duration-300 pointer-events-none"></div>
-                  
-                  <div className="aspect-square relative w-full flex items-center justify-center p-3 z-10">
-                    <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <img 
-                      src={`/logo${logoIndex}.png`}
-                      alt={`Partner Logo ${logoIndex}`}
-                      className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-lg group-hover:drop-shadow-2xl"
-                      style={{filter: 'drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5))'}}
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.style.display = 'none';
-                      }}
-                    />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+      <div className="mt-12 md:mt-14 flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-stretch sm:items-center">
+        <BrandButton href="/Home#contact" variant="primary">
+          Get Started
+        </BrandButton>
+        <BrandButton href="/Home#contact" variant="secondary">
+          Book Demo
+        </BrandButton>
+      </div>
 
-          {/* Disclaimer */}
-          <div className="mt-4 text-center">
-            <p className="text-[7px] sm:text-[9px] text-gray-500 leading-tight max-w-3xl mx-auto">
-              Logos are used strictly for factual media distribution reference. All trademarks belong to their respective owners. No partnership or endorsement is implied.
-            </p>
-          </div>
+      <div className="mt-16 md:mt-20 pt-12 md:pt-16 border-t border-white/10">
+        <h2 className="text-2xl font-semibold text-white text-center mb-3">
+          Trusted references
+        </h2>
+        <p className="text-gray-400 text-center text-sm max-w-xl mx-auto mb-10">
+          Organizations and brands we cite for factual context. Trademarks
+          belong to their respective owners.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13].map((logoIndex) => (
+            <PartnerLogo key={logoIndex} index={logoIndex} />
+          ))}
         </div>
+        <p className="mt-8 text-center text-[10px] sm:text-xs text-gray-500 max-w-3xl mx-auto leading-snug">
+          Logos are used strictly for factual media distribution reference. No
+          partnership or endorsement is implied.
+        </p>
       </div>
     </section>
-  );
-};
-
-export default ProductsSection;
+  )
+}

@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 
@@ -31,16 +32,24 @@ export default function Navbar() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center space-x-2 sm:space-x-3"
+            className="flex items-center"
           >
-            <img
-              src="/logo1.jpg"
-              alt="Logo"
-              className="h-8 w-auto sm:h-10 object-contain"
-            />
-            <span className="text-base sm:text-lg md:text-xl font-semibold bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent tracking-wide bg-[length:200%_auto] animate-gradient-shift">
-              Amenity Forge
-            </span>
+            <Link
+              href="/Home"
+              className="flex items-center space-x-2 sm:space-x-3 outline-none focus-visible:ring-2 focus-visible:ring-yellow-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-md"
+              aria-label="Amenity Forge home"
+            >
+              <img
+                src="/logo.svg"
+                alt=""
+                width={40}
+                height={40}
+                className="h-8 w-8 sm:h-10 sm:w-10 shrink-0 object-contain"
+              />
+              <span className="text-base sm:text-lg md:text-xl font-semibold bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent tracking-wide bg-[length:200%_auto] animate-gradient-shift">
+                Amenity Forge
+              </span>
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}

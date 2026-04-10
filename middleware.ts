@@ -43,6 +43,16 @@ export function middleware(request: NextRequest) {
     if (url.pathname.startsWith('/jobs')) {
       return NextResponse.next()
     }
+    // APIs and files in /public must not be prefixed with /jobs
+    if (url.pathname.startsWith('/api')) {
+      return NextResponse.next()
+    }
+    if (
+      url.pathname.startsWith('/_next') ||
+      /\.(svg|png|jpg|jpeg|gif|webp|ico|woff2?|glb)$/i.test(url.pathname)
+    ) {
+      return NextResponse.next()
+    }
     url.pathname = `/jobs${url.pathname}`
     return NextResponse.rewrite(url)
   }
@@ -52,6 +62,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|logo1.jpg).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|logo.svg|logo1.jpg).*)',
   ],
 }

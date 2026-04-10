@@ -31,11 +31,6 @@ const services = [
     description: "Deploy scalable cloud infrastructure with CI/CD pipelines and DevOps practices for faster delivery.",
   },
   {
-    title: "Video Editing",
-    description:
-      "Professional video production, cutting, and enhancements for marketing, training, and content creation.",
-  },
-  {
     title: "Quality Assessments",
     description: "Comprehensive QA services including manual and automated testing for bug-free product delivery.",
   },
@@ -61,7 +56,7 @@ const services = [
     description: "Manage AV setup, troubleshooting, and remote assistance for smooth virtual and in-person events.",
   },
   {
-    title: "Freelance/Employment Support",
+    title: "Employment Support",
     description: "Match skilled professionals with opportunities, and support hiring through digital platforms.",
   },
   {

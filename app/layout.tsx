@@ -14,11 +14,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/logo1.jpg" type="image/png" />
+        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <RootClientShell>{children}</RootClientShell>
       </body>
     </html>

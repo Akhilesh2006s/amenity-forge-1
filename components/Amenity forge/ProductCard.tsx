@@ -1,65 +1,61 @@
 "use client"
 
-import React from "react";
-import { LucideIcon } from "lucide-react";
-import { motion } from "framer-motion";
+import { LucideIcon } from "lucide-react"
 
 interface ProductCardProps {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-  delay?: number;
-  isHighlighted?: boolean;
+  title: string
+  description: string
+  icon: LucideIcon
+  featured?: boolean
+  className?: string
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({
+export default function ProductCard({
   title,
   description,
   icon: Icon,
-  delay = 0,
-  isHighlighted = false,
-}) => {
+  featured = false,
+  className = "",
+}: ProductCardProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: delay / 1000 }}
-      viewport={{ once: true }}
-      className="group relative animate-fade-in-up"
-      style={{animationDelay: `${delay / 1000}s`}}
+    <article
+      className={[
+        "group rounded-2xl border border-white/10 bg-[#111827] text-white",
+        "p-6 md:p-8 transition-all duration-300 ease-out",
+        "hover:-translate-y-[5px] hover:border-orange-500/25",
+        "hover:shadow-lg hover:shadow-orange-500/[0.12]",
+        featured ? "lg:col-span-2" : "",
+        className,
+      ]
+        .filter(Boolean)
+        .join(" ")}
     >
-      <div className={`relative overflow-hidden rounded-xl backdrop-blur-md border p-4 h-full transition-all duration-500 transform hover:scale-[1.02] hover:shadow-xl ${
-        isHighlighted 
-          ? 'bg-gradient-to-r from-gray-700/95 via-gray-600/95 to-gray-700/95 border-yellow-400/70 shadow-xl shadow-yellow-400/20' 
-          : 'bg-gradient-to-r from-gray-800/90 via-gray-700/90 to-gray-800/90 border-gray-600/50 hover:border-yellow-400/70 hover:shadow-yellow-400/20'
-      }`}>
-        {/* Shimmer effect on hover */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-        
-        {/* Icon */}
-        <div className="relative z-10 mb-3">
-          <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-r from-yellow-400 to-orange-500 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-yellow-400/30">
-            <Icon className="h-5 w-5 text-black" />
-          </div>
-        </div>
-        
-        {/* Content */}
-        <div className="relative z-10">
-          <h3 className={`text-base sm:text-lg font-bold mb-2 group-hover:text-yellow-400 transition-colors duration-300 leading-tight ${
-            isHighlighted ? 'text-yellow-400' : 'text-white'
-          }`}>
-            {title}
-          </h3>
-          <p className="text-sm text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300 line-clamp-4">
-            {description}
-          </p>
-        </div>
-        
-        {/* Glow effect */}
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-yellow-400/0 via-yellow-400/10 to-yellow-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+      <div
+        className={[
+          "mb-5 inline-flex h-11 w-11 items-center justify-center rounded-xl",
+          "bg-orange-500/15 text-orange-400",
+          "ring-1 ring-orange-500/25 transition-colors duration-300",
+          "group-hover:bg-orange-500/20 group-hover:text-orange-300",
+        ].join(" ")}
+      >
+        <Icon className="h-5 w-5" aria-hidden />
       </div>
-    </motion.div>
-  );
-};
-
-export default ProductCard;
+      <h3
+        className={[
+          "font-semibold text-white mb-3",
+          featured ? "text-2xl md:text-3xl" : "text-xl",
+        ].join(" ")}
+      >
+        {title}
+      </h3>
+      <p
+        className={[
+          "text-gray-400 leading-relaxed",
+          featured ? "text-base max-w-2xl" : "text-sm md:text-base",
+        ].join(" ")}
+      >
+        {description}
+      </p>
+    </article>
+  )
+}

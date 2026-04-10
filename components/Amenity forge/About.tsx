@@ -151,38 +151,14 @@ const About = () => {
             <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start">
               {/* Left Side - Image/Icon */}
               <div className="relative animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                <div className="relative rounded-xl overflow-hidden shadow-xl group border border-gray-700/50 mb-4">
+                <div className="relative rounded-xl overflow-hidden shadow-xl group border border-gray-700/50 w-full max-w-[1412px]">
                   <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <img 
-                    src="/founder.png" 
+                  <img
+                    src="/founder.jpg"
                     alt="Shri Yasaswi - Founder & CEO"
-                    className="w-full h-[280px] lg:h-[320px] object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500"></div>
-                  {/* Decorative badge */}
-                  <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-yellow-400 to-orange-500 p-2.5 rounded-full shadow-xl border-2 border-black z-10">
-                    <Award className="w-5 h-5 text-black" />
-                  </div>
-                </div>
-                
-                {/* Screenshot image below founder photo */}
-                <div className="relative mt-4 rounded-xl overflow-hidden shadow-xl group border border-gray-700/50">
-                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <img 
-                    src="/founder-screenshot.png" 
-                    alt="Founder"
-                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-500"></div>
-                </div>
-                
-                {/* Team presentation image */}
-                <div className="relative mt-4 rounded-xl overflow-hidden shadow-xl group border border-gray-700/50">
-                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <img 
-                    src="/team-presentation.png" 
-                    alt="Team Presentation"
-                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                    width={1412}
+                    height={1024}
+                    className="w-full max-w-[1412px] aspect-[1412/1024] object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-500"></div>
                 </div>
