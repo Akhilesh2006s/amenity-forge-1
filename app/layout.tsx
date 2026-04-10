@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+        <link rel="icon" href="/WhatsApp%20Image%202026-04-10%20at%2023.03.49.jpeg" type="image/jpeg" />
       </head>
       <body suppressHydrationWarning>
         <RootClientShell>{children}</RootClientShell>

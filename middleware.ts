@@ -62,6 +62,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|logo.svg|logo1.jpg).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|WhatsApp Image 2026-04-10 at 23\\.03\\.49\\.jpeg).*)',
   ],
 }

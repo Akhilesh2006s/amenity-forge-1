@@ -40,7 +40,7 @@ export default function Navbar() {
               aria-label="Amenity Forge home"
             >
               <img
-                src="/logo.svg"
+                src="/WhatsApp%20Image%202026-04-10%20at%2023.03.49.jpeg"
                 alt=""
                 width={40}
                 height={40}
