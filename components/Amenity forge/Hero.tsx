@@ -51,7 +51,7 @@ const Hero = () => {
           </span>
         </div>
         
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-3 lg:mb-4 bg-gradient-to-r from-yellow-400 via-orange-500 to-purple-500 bg-clip-text text-transparent leading-tight animate-fade-in-up bg-[length:200%_auto] animate-gradient-shift px-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-3 lg:mb-4 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent leading-tight animate-fade-in-up bg-[length:200%_auto] animate-gradient-shift px-4">
           You are just an amenity away
         </h1>
         

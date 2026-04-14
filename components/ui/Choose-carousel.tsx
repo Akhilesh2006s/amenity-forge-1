@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState, createContext, useContext } from "r
 import { IconArrowNarrowLeft, IconArrowNarrowRight, IconX } from "@tabler/icons-react"
 import { cn } from "@/lib/utils"
 import { AnimatePresence, motion } from "framer-motion" // Corrected import
-import type { ImageProps } from "next/image"
 import { useOutsideClick } from "@/components/click"
 
 interface CarouselProps {
@@ -251,18 +250,24 @@ export const Card = ({
   )
 }
 
-export const BlurImage = ({ height, width, src, className, alt, ...rest }: ImageProps) => {
+export const BlurImage = ({
+  height,
+  width,
+  src,
+  className,
+  alt,
+  ...rest
+}: React.ComponentPropsWithoutRef<"img">) => {
   const [isLoading, setLoading] = useState(true)
   return (
     <img
       className={cn("h-full w-full transition duration-300", isLoading ? "blur-sm" : "blur-0", className)}
       onLoad={() => setLoading(false)}
-      src={(src as string) || "/placeholder.svg"}
+      src={typeof src === "string" ? src : "/placeholder.svg"}
       width={width}
       height={height}
       loading="lazy"
       decoding="async"
-      blurDataURL={typeof src === "string" ? src : undefined}
       alt={alt ? alt : "Background of a beautiful view"}
       {...rest}
     />

@@ -53,8 +53,9 @@ export function middleware(request: NextRequest) {
     ) {
       return NextResponse.next()
     }
-    url.pathname = `/jobs${url.pathname}`
-    return NextResponse.rewrite(url)
+    // For non-jobs pages on jobs subdomain, send users to the main site.
+    const mainSiteUrl = new URL(url.pathname + url.search, 'https://www.amenityforge.com')
+    return NextResponse.redirect(mainSiteUrl)
   }
   
   return NextResponse.next()

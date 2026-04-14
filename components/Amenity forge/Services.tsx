@@ -52,10 +52,6 @@ const services = [
       "Scalable customer service with chat, email, and voice support to maintain satisfaction and retention.",
   },
   {
-    title: "Audio/ Video Support",
-    description: "Manage AV setup, troubleshooting, and remote assistance for smooth virtual and in-person events.",
-  },
-  {
     title: "Employment Support",
     description: "Match skilled professionals with opportunities, and support hiring through digital platforms.",
   },

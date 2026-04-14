@@ -1,6 +1,5 @@
 "use client"
 
-import Navbar from "@/components/Amenity forge/navbar";
 import Footer from "@/components/Amenity forge/footer";
 import { motion } from "framer-motion";
 import { ExternalLink, Shield, GraduationCap, Award, BarChart3, BadgeCheck, Users, Sparkles, BookOpen, FileCheck, TrendingUp, School } from "lucide-react";
@@ -8,7 +7,6 @@ import { ExternalLink, Shield, GraduationCap, Award, BarChart3, BadgeCheck, User
 export default function GTPPage() {
   return (
     <div className="min-h-screen bg-black">
-      <Navbar />
       {/* GTAP Hero Section */}
       <section className="pt-12 sm:pt-16 lg:pt-20 pb-6 sm:pb-8 lg:pb-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

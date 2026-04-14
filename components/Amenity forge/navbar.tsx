@@ -2,20 +2,36 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { useState } from "react"
+import { useLayoutEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 
 export default function Navbar() {
+  const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
+  const [isJobsPortalHost, setIsJobsPortalHost] = useState(false)
+
+  useLayoutEffect(() => {
+    if (typeof window === "undefined") return
+    setIsJobsPortalHost(window.location.hostname.toLowerCase().startsWith("jobs."))
+  }, [])
+
+  const hideNav =
+    pathname === "/jobs" ||
+    (pathname != null && pathname.startsWith("/jobs/")) ||
+    isJobsPortalHost
+
+  if (hideNav) {
+    return null
+  }
 
   const navItems = [
-    { name: "Home", href: "/Home" },
-    { name: "Products", href: "/Products" },
-    { name: "Services", href: "/Services" },
-    { name: "RNXA", href: "/RNXA" },
-    { name: "About", href: "/About" },
-    // External jobs portal subdomain
-    { name: "Jobs Portal", href: "https://jobs.amenityforge.com" },
+    { name: "Home", href: "/Home", openInNewTab: false },
+    { name: "Products", href: "/Products", openInNewTab: false },
+    { name: "Services", href: "/Services", openInNewTab: false },
+    { name: "RNXA", href: "/RNXA", openInNewTab: false },
+    { name: "About", href: "/About", openInNewTab: false },
+    { name: "Jobs Portal", href: "https://jobs.amenityforge.com", openInNewTab: true },
   ]
 
   return (
@@ -58,6 +74,8 @@ export default function Navbar() {
               <motion.a
                 key={item.name}
                 href={item.href}
+                target={item.openInNewTab ? "_blank" : undefined}
+                rel={item.openInNewTab ? "noopener noreferrer" : undefined}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
@@ -95,6 +113,8 @@ export default function Navbar() {
               <motion.a
                 key={item.name}
                 href={item.href}
+                target={item.openInNewTab ? "_blank" : undefined}
+                rel={item.openInNewTab ? "noopener noreferrer" : undefined}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : -20 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}

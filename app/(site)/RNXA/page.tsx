@@ -1,6 +1,5 @@
 "use client"
 
-import Navbar from "@/components/Amenity forge/navbar";
 import Footer from "@/components/Amenity forge/footer";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
@@ -8,7 +7,6 @@ import { ExternalLink } from "lucide-react";
 export default function RNXAPage() {
   return (
     <div className="min-h-screen bg-black font-sans">
-      <Navbar />
       <section className="pt-16 sm:pt-20 lg:pt-24 pb-0 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6 lg:mb-8 animate-fade-in-up">

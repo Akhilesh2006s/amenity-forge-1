@@ -7,12 +7,10 @@ import Project from "@/components/Amenity forge/Projects"
 import Result from "@/components/Amenity forge/Results"
 import Review from "@/components/Amenity forge/Testimonials"
 import Footer from "@/components/Amenity forge/footer"
-import Navbar from "@/components/Amenity forge/navbar"
 
 export default function Page() {
   return (
     <div className="bg-black min-h-screen">
-      <Navbar />
       <HeroGeometric />
       <Service/>
       <Choose/>
