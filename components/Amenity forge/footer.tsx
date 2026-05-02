@@ -28,7 +28,7 @@ export default function Footer() {
             <a href="https://in.linkedin.com/company/amenityforge" target="_blank" rel="noopener noreferrer" className="group relative p-2 rounded-lg bg-gray-800/50 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500 transition-all duration-300 transform hover:scale-110">
               <Linkedin className="text-gray-400 group-hover:text-black transition-colors duration-300" />
             </a>
-            <a href="https://mail.google.com/mail/?view=cm&to=founder@amenityforge.com" target="_blank" rel="noopener noreferrer" className="group relative p-2 rounded-lg bg-gray-800/50 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500 transition-all duration-300 transform hover:scale-110">
+            <a href="https://mail.google.com/mail/?view=cm&to=info@amenityforge.com" target="_blank" rel="noopener noreferrer" className="group relative p-2 rounded-lg bg-gray-800/50 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500 transition-all duration-300 transform hover:scale-110">
               <Mail className="text-gray-400 group-hover:text-black transition-colors duration-300" />
             </a>
           </div>

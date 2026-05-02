@@ -29,7 +29,6 @@ export default function Navbar() {
     { name: "Home", href: "/Home", openInNewTab: false },
     { name: "Products", href: "/Products", openInNewTab: false },
     { name: "Services", href: "/Services", openInNewTab: false },
-    { name: "RNXA", href: "/RNXA", openInNewTab: false },
     { name: "About", href: "/About", openInNewTab: false },
     { name: "Jobs Portal", href: "https://jobs.amenityforge.com", openInNewTab: true },
   ]

@@ -86,8 +86,7 @@ const Home = () => {
           <div className="space-y-3 sm:space-y-4">
             <div className="space-y-2 sm:space-y-3">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-bold leading-tight">
-                  <span className="text-white block">One Platform</span>
-                  <span className="text-white block mb-1 sm:mb-1.5">Every Organisation</span>
+                <span className="text-white block mb-1 sm:mb-1.5">Every Organisation</span>
                 <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent block">
                   Endless Possibilities
                 </span>

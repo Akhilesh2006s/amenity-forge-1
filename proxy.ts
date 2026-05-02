@@ -1,13 +1,13 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone()
   const hostname = request.headers.get('host') || ''
-  
+
   // Extract subdomain (e.g., "admin" from "admin.amenityforge.com")
   const subdomain = hostname.split('.')[0]
-  
+
   // Route admin subdomain to /admin pages
   if (subdomain === 'admin' && hostname.includes('amenityforge.com')) {
     // If accessing root, go to admin login
@@ -33,7 +33,7 @@ export function middleware(request: NextRequest) {
     url.pathname = `/admin${url.pathname}`
     return NextResponse.rewrite(url)
   }
-  
+
   // Route jobs subdomain to /jobs pages
   if (subdomain === 'jobs' && hostname.includes('amenityforge.com')) {
     if (url.pathname === '/') {
@@ -57,7 +57,7 @@ export function middleware(request: NextRequest) {
     const mainSiteUrl = new URL(url.pathname + url.search, 'https://www.amenityforge.com')
     return NextResponse.redirect(mainSiteUrl)
   }
-  
+
   return NextResponse.next()
 }
 

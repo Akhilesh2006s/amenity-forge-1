@@ -1,10 +1,10 @@
-// Copy this file to middleware.ts in the root directory if you want subdomain routing
+// Copy this file to proxy.ts in the root directory if you want subdomain routing
 // This allows jobs.amenityforge.com to show different content than amenityforge.com
 
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone()
   const hostname = request.headers.get('host') || ''
   

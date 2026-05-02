@@ -3,9 +3,9 @@ import './globals.css'
 import RootClientShell from '@/components/Amenity forge/RootClientShell'
 
 export const metadata: Metadata = {
-  title: 'Amenityforge',
-  description: 'Amenityforge',
-  generator: 'Amenityforge',
+  title: 'Amenity Forge',
+  description: 'Amenity Forge',
+  generator: 'Amenity Forge',
 }
 
 export default function RootLayout({

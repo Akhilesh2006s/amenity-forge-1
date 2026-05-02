@@ -39,10 +39,6 @@ const services = [
     description: "Build secure and transparent decentralized apps with blockchain integration and smart contracts.",
   },
   {
-    title: "Strategic Presentations",
-    description: "We design high-impact presentations that help organizations secure funding, win contracts, and drive business growth.",
-  },
-  {
     title: "Data Analytics",
     description: "Turn raw data into insights using dashboards, business intelligence tools, and predictive models.",
   },
